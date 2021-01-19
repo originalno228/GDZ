@@ -93,6 +93,16 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Русский {
+            get {
+                object obj = ResourceManager.GetObject("Русский", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Трасса {
             get {
                 object obj = ResourceManager.GetObject("Трасса", resourceCulture);
