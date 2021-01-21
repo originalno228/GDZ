@@ -34,13 +34,13 @@ namespace WindowsFormsApp2
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -96,16 +96,6 @@ namespace WindowsFormsApp2
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(343, 406);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(155, 66);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Form2";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -153,7 +143,6 @@ namespace WindowsFormsApp2
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources._1;
             this.pictureBox1.Location = new System.Drawing.Point(714, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 281);
@@ -163,16 +152,24 @@ namespace WindowsFormsApp2
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(14, 380);
             this.button5.Margin = new System.Windows.Forms.Padding(5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(163, 86);
             this.button5.TabIndex = 37;
             this.button5.Text = "На главную";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(343, 406);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(155, 66);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Form2";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // EnglishForm
             // 
@@ -194,7 +191,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.numericUpDown1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.ForeColor = System.Drawing.Color.Crimson;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "EnglishForm";
             this.Text = "Form1";
@@ -213,12 +210,12 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label button5;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
 

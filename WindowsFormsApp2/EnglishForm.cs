@@ -12,9 +12,39 @@ namespace WindowsFormsApp2
 {
     public partial class EnglishForm : Form
     {
-        public EnglishForm()
+        public EnglishForm(string name)
         {
             InitializeComponent();
+            Text = name;
+            if (name == "Английский язык")
+            {
+                label2.Text = "GDZ.Putina по английскому языку" +
+                    Environment.NewLine + 
+                    "сложно";
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Афанасьева, Михеева");
+                comboBox1.Items.Add("Пушкин");
+                comboBox1.Items.Add("Лермонтов");
+
+
+            }
+            if (name == "Русский язык")
+            {
+                label2.Text = "GDZ.Putina по русскому языку" +
+                      Environment.NewLine +
+                    "платно";
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Тростнецова");
+                comboBox1.Items.Add("213s423541");
+
+                button3.Visible = false;
+            }
+            if (name == "Алгебра")
+            {
+                label2.Text = "GDZ.Putina по алгебре" +
+                      Environment.NewLine +
+                    "вавла";
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -64,6 +94,11 @@ namespace WindowsFormsApp2
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
         {
 
         }

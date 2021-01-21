@@ -29,13 +29,13 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm();
+            EnglishForm newForm = new EnglishForm("Английский язык");
             newForm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-           RussianForm newForm = new RussianForm();
+            EnglishForm newForm = new EnglishForm("Русский язык");
             newForm.Show();
         }
 
