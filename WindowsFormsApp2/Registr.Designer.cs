@@ -94,7 +94,7 @@ namespace WindowsFormsApp2
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.checkBox1.Location = new System.Drawing.Point(422, 308);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(5);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(189, 33);
             this.checkBox1.TabIndex = 27;
@@ -124,6 +124,7 @@ namespace WindowsFormsApp2
             this.button4.TabIndex = 37;
             this.button4.Text = "Войти";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
             // 
@@ -149,7 +150,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Registr";
             this.Text = "Registr";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

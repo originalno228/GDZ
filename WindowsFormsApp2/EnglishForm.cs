@@ -18,6 +18,7 @@ namespace WindowsFormsApp2
             Text = name;
             if (name == "Английский язык")
             {
+                pictureBox1.Load("../../../pictures/1.jpg");
                 label2.Text = "GDZ.Putina по английскому языку" +
                     Environment.NewLine + 
                     "сложно";
@@ -25,11 +26,18 @@ namespace WindowsFormsApp2
                 comboBox1.Items.Add("Афанасьева, Михеева");
                 comboBox1.Items.Add("Пушкин");
                 comboBox1.Items.Add("Лермонтов");
+                if (comboBox1.Text == "Пушкин")
+                {
+                    pictureBox1.Load("../../../pictures/Химия.jpg");
+
+
+                }
 
 
             }
             if (name == "Русский язык")
             {
+                pictureBox1.Load("../../../pictures/русский.jpg");
                 label2.Text = "GDZ.Putina по русскому языку" +
                       Environment.NewLine +
                     "платно";
@@ -37,13 +45,59 @@ namespace WindowsFormsApp2
                 comboBox1.Items.Add("Тростнецова");
                 comboBox1.Items.Add("213s423541");
 
-                button3.Visible = false;
+               
             }
             if (name == "Алгебра")
             {
                 label2.Text = "GDZ.Putina по алгебре" +
                       Environment.NewLine +
-                    "вавла";
+                    "Решение уравнений";
+                pictureBox1.Load("../../../pictures/Алгебра.jpg");
+        
+            }
+
+            if (name == "Геометрия")
+            {
+                label2.Text = "GDZ.Putina по алгебре" +
+                      Environment.NewLine +
+                    "7-9 класс, много теорем -__-";
+                pictureBox1.Load("../../../pictures/Геометрия.jpg");
+
+            }
+
+            if (name == "География")
+            {
+                label2.Text = "GDZ.Putina по география" +
+                      Environment.NewLine +
+                    "изучения климата России";
+                pictureBox1.Load("../../../pictures/География.jpg");
+
+            }
+            if (name == "Физика")
+            {
+                label2.Text = "GDZ.Putina по физике" +
+                      Environment.NewLine +
+                    "Тепловые явление";
+                pictureBox1.Load("../../../pictures/Физика.jpg");
+
+            }
+
+            if (name == "Химия")
+            {
+                label2.Text = "GDZ.Putina по химии" +
+                      Environment.NewLine +
+                    "Соли, кислоты, оксиды...";
+                pictureBox1.Load("../../../pictures/Химия.jpg");
+
+            }
+
+            if (name == "История")
+            {
+                label2.Text = "GDZ.Putina по алгебре" +
+                      Environment.NewLine +
+                    "История России";
+                pictureBox1.Load("../../../pictures/История.jpg");
+
             }
         }
 
@@ -74,12 +128,12 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            button2.Visible = false;
+           // button2.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            button3.Location = new Point(button3.Location.X + 5, button2.Location.Y);
+            //button3.Location = new Point(button3.Location.X + 5, button2.Location.Y);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -99,6 +153,11 @@ namespace WindowsFormsApp2
         }
 
         private void button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
