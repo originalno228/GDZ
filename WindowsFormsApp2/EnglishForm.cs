@@ -161,5 +161,15 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericUpDown2.Value == 2)
+            {
+                pictureBox1.Load("../../../pictures/Химия.jpg");
+
+
+            }
+        }
     }
 }
