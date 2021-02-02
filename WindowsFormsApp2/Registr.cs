@@ -38,6 +38,7 @@ namespace WindowsFormsApp2
             this.Visible = false;
             form2.Show();
             this.Visible = true;
+            this.Close();
         }
     }
 }

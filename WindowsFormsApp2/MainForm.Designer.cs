@@ -48,6 +48,7 @@ namespace WindowsFormsApp2
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
             this.radioButton1.Location = new System.Drawing.Point(606, 12);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(75, 33);
@@ -162,7 +163,6 @@ namespace WindowsFormsApp2
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button9

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,17 @@ namespace WindowsFormsApp2
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        //string predmet;
+        public MainForm()//string predmet1)
         {
             InitializeComponent();
+            //predmet = predmet1;
+            //InitializeComponent();
+
+            //pictureBox1.Load("../../Resources/" + predmet + ".jpg");
+            //label1.Text =
+                //File.ReadAllText("../../Resources/" + predmet + ".txt");
+
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -91,7 +100,7 @@ namespace WindowsFormsApp2
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://vk.com/mihmet");
         }
 
         private void MainForm_Load(object sender, EventArgs e)

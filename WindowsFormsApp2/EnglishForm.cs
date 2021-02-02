@@ -12,48 +12,46 @@ namespace WindowsFormsApp2
 {
     public partial class EnglishForm : Form
     {
+        string predmet;
         public EnglishForm(string name)
         {
+            predmet = name;
             InitializeComponent();
             Text = name;
+            pictureBox1.Load("../../../pictures/" + name + ".jpg");
+            
+            string a = "GDZ.Putina по";
+
             if (name == "Английский язык")
             {
-                pictureBox1.Load("../../../pictures/1.jpg");
-                label2.Text = "GDZ.Putina по английскому языку" +
-                    Environment.NewLine + 
-                    "сложно";
+                //pictureBox1.Load("../../../pictures/1.jpg");
+                label2.Text = a + " английскому языку";
+                    //Environment.NewLine + 
+                    //"сложно";
                 comboBox1.Items.Clear();
                 comboBox1.Items.Add("Афанасьева, Михеева");
                 comboBox1.Items.Add("Пушкин");
                 comboBox1.Items.Add("Лермонтов");
-                if (comboBox1.Text == "Пушкин")
-                {
-                    pictureBox1.Load("../../../pictures/Химия.jpg");
-
-
-                }
 
 
             }
             if (name == "Русский язык")
             {
-                pictureBox1.Load("../../../pictures/русский.jpg");
-                label2.Text = "GDZ.Putina по русскому языку" +
+                label2.Text = "GDZ.Putinaf по русскому языку" +
                       Environment.NewLine +
                     "платно";
                 comboBox1.Items.Clear();
                 comboBox1.Items.Add("Тростнецова");
-                comboBox1.Items.Add("213s423541");
-
-               
+                comboBox1.Items.Add("Пушкин");
+                //this.
+                this.BackColor = Color.Green;
+                //this.BackColor = ColorTranslator.FromHtml("#FFFFFF");
             }
             if (name == "Алгебра")
             {
                 label2.Text = "GDZ.Putina по алгебре" +
                       Environment.NewLine +
-                    "Решение уравнений";
-                pictureBox1.Load("../../../pictures/Алгебра.jpg");
-        
+                    "Решение уравнений";        
             }
 
             if (name == "Геометрия")
@@ -61,8 +59,6 @@ namespace WindowsFormsApp2
                 label2.Text = "GDZ.Putina по алгебре" +
                       Environment.NewLine +
                     "7-9 класс, много теорем -__-";
-                pictureBox1.Load("../../../pictures/Геометрия.jpg");
-
             }
 
             if (name == "География")
@@ -70,16 +66,12 @@ namespace WindowsFormsApp2
                 label2.Text = "GDZ.Putina по география" +
                       Environment.NewLine +
                     "изучения климата России";
-                pictureBox1.Load("../../../pictures/География.jpg");
-
             }
             if (name == "Физика")
             {
                 label2.Text = "GDZ.Putina по физике" +
                       Environment.NewLine +
                     "Тепловые явление";
-                pictureBox1.Load("../../../pictures/Физика.jpg");
-
             }
 
             if (name == "Химия")
@@ -87,8 +79,6 @@ namespace WindowsFormsApp2
                 label2.Text = "GDZ.Putina по химии" +
                       Environment.NewLine +
                     "Соли, кислоты, оксиды...";
-                pictureBox1.Load("../../../pictures/Химия.jpg");
-
             }
 
             if (name == "История")
@@ -96,8 +86,6 @@ namespace WindowsFormsApp2
                 label2.Text = "GDZ.Putina по алгебре" +
                       Environment.NewLine +
                     "История России";
-                pictureBox1.Load("../../../pictures/История.jpg");
-
             }
         }
 
@@ -108,7 +96,11 @@ namespace WindowsFormsApp2
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //по изменению автора меняется картинка
+            {
+                ///pictureBox1.Load("../../../pictures/Химия.jpg");
+                pictureBox1.Load("../../../pictures/" + predmet + ", " + comboBox1.Text + ".jpg");
+            }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -170,6 +162,11 @@ namespace WindowsFormsApp2
 
 
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
