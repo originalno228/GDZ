@@ -51,14 +51,16 @@ namespace WindowsFormsApp2
             {
                 label2.Text = "GDZ.Putina по алгебре" +
                       Environment.NewLine +
-                    "Решение уравнений";        
+                    "Решение уравнений";
+                this.BackColor = Color.Yellow;
             }
 
             if (name == "Геометрия")
             {
-                label2.Text = "GDZ.Putina по алгебре" +
+                label2.Text = "геометрии" +
                       Environment.NewLine +
                     "7-9 класс, много теорем -__-";
+                this.BackColor = Color.Black;
             }
 
             if (name == "География")
@@ -98,8 +100,15 @@ namespace WindowsFormsApp2
         {
             //по изменению автора меняется картинка
             {
+
                 ///pictureBox1.Load("../../../pictures/Химия.jpg");
-                pictureBox1.Load("../../../pictures/" + predmet + ", " + comboBox1.Text + ".jpg");
+                try
+                {
+                    pictureBox1.Load("../../../pictures/" + predmet + ", " + comboBox1.Text + ".jpg");
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
+                
+                
             }
         }
 
@@ -115,7 +124,9 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Да");
+            MessageBox.Show("Черная тема включена!");
+            BackColor = Color.Black;
+            ForeColor = Color.White;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -165,6 +176,11 @@ namespace WindowsFormsApp2
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

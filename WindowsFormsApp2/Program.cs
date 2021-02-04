@@ -8,6 +8,8 @@ namespace WindowsFormsApp2
 {
     static class Program
     {
+        public static string LOGIN = "Navalny";
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

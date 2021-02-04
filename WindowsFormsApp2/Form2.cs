@@ -26,13 +26,12 @@ namespace WindowsFormsApp2
         {
             if (textBox1.Text != "" || textBox2.Text != "")
             {
-                Admin newForm = new Admin(textBox1.Text);
+                Program.LOGIN = textBox1.Text;
+                Admin newForm = new Admin();
                 newForm.Show();                
             }
             else 
                 MessageBox.Show("Введите хоть что-то ну епт"); 
-                
-
         }
     }
 }

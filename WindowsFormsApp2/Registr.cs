@@ -15,6 +15,14 @@ namespace WindowsFormsApp2
         public Registr()
         {
             InitializeComponent();
+            if (textBox1.Text != "" || textBox2.Text != "")
+            {
+                Program.LOGIN = "aue";
+                Admin newForm = new Admin();
+                newForm.Show();
+            }
+            else
+                MessageBox.Show("Введите хоть что-то ну епт");
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -34,11 +42,19 @@ namespace WindowsFormsApp2
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //if (textBox1.Text == '1')
+
+            this.Close();
             MainForm form2 = new MainForm();
             this.Visible = false;
             form2.Show();
             this.Visible = true;
-            this.Close();
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://vk.com/mihmet");
         }
     }
 }

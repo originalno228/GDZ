@@ -13,17 +13,24 @@ namespace WindowsFormsApp2
 {
     public partial class MainForm : Form
     {
-        //string predmet;
-        public MainForm()//string predmet1)
+        
+        public MainForm()
         {
             InitializeComponent();
-            //predmet = predmet1;
-            //InitializeComponent();
+         
 
-            //pictureBox1.Load("../../Resources/" + predmet + ".jpg");
-            //label1.Text =
-                //File.ReadAllText("../../Resources/" + predmet + ".txt");
-
+            if (Program.LOGIN == "aue")
+            {
+                label1.Visible = true;
+                //button1.Visible = true;
+                //label1.Visible = false;
+            }
+            else
+            {
+                label1.Visible = false;
+               // button1.Visible = false;
+            }
+         
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -75,13 +82,14 @@ namespace WindowsFormsApp2
 
         private void button7_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("Химия");
+            EnglishForm newForm = new EnglishForm(button7.Text);
             newForm.Show();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void OpenPrdemet(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("История");
+            Button btn = (Button)sender;
+            EnglishForm newForm = new EnglishForm(btn.Text);
             newForm.Show();
         }
 
@@ -97,7 +105,7 @@ namespace WindowsFormsApp2
         {
 
         }
-
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://vk.com/mihmet");

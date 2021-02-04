@@ -71,7 +71,7 @@ namespace WindowsFormsApp2
             this.label1.Text = "Связь с разработчиком:\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Visible = false;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -81,7 +81,7 @@ namespace WindowsFormsApp2
             this.button4.TabIndex = 27;
             this.button4.Text = "Русский язык";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.OpenPrdemet);
             // 
             // button1
             // 
@@ -91,7 +91,7 @@ namespace WindowsFormsApp2
             this.button1.TabIndex = 28;
             this.button1.Text = "Английский язык";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.OpenPrdemet);
             // 
             // button2
             // 
@@ -101,7 +101,7 @@ namespace WindowsFormsApp2
             this.button2.TabIndex = 29;
             this.button2.Text = "Алгебра";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.OpenPrdemet);
             // 
             // button3
             // 
@@ -111,7 +111,7 @@ namespace WindowsFormsApp2
             this.button3.TabIndex = 30;
             this.button3.Text = "Геометрия";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.OpenPrdemet);
             // 
             // button5
             // 
@@ -121,7 +121,7 @@ namespace WindowsFormsApp2
             this.button5.TabIndex = 31;
             this.button5.Text = "География";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.OpenPrdemet);
             // 
             // button6
             // 
@@ -131,7 +131,7 @@ namespace WindowsFormsApp2
             this.button6.TabIndex = 32;
             this.button6.Text = "Физика";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.OpenPrdemet);
             // 
             // button7
             // 
@@ -141,7 +141,7 @@ namespace WindowsFormsApp2
             this.button7.TabIndex = 33;
             this.button7.Text = "Химия";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.OpenPrdemet);
             // 
             // button8
             // 
@@ -151,7 +151,7 @@ namespace WindowsFormsApp2
             this.button8.TabIndex = 34;
             this.button8.Text = "История";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.OpenPrdemet);
             // 
             // pictureBox2
             // 

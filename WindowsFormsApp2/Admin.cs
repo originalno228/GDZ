@@ -12,12 +12,12 @@ namespace WindowsFormsApp2
 {
     public partial class Admin : Form
     {
-        public Admin(string login)
+        public Admin()
         {
             InitializeComponent();
-            label1.Text = "Hello " + login;
+            label1.Text = "Hello " + Program.LOGIN;
 
-             if (login == "Навальный")
+            if (Program.LOGIN == "Навальный")
             {
                 button1.Visible = true;
                 label1.Visible = false;
@@ -27,8 +27,6 @@ namespace WindowsFormsApp2
                 label1.Visible = true;
                 button1.Visible = false;
             }
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
