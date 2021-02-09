@@ -10,13 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
+  
     public partial class EnglishForm : Form
     {
         string predmet;
+        //Uchebnik[] uchebniks = new Uchebnik[3];   
         public EnglishForm(string name)
         {
+           
+
+
             predmet = name;
             InitializeComponent();
+
+       
+
             Text = name;
             pictureBox1.Load("../../../pictures/" + name + ".jpg");
             
@@ -24,6 +32,7 @@ namespace WindowsFormsApp2
 
             if (name == "Английский язык")
             {
+                pictureBox1.Load("../../../Продукты/бургер.txt");
                 //pictureBox1.Load("../../../pictures/1.jpg");
                 label2.Text = a + " английскому языку";
                     //Environment.NewLine + 
@@ -32,6 +41,7 @@ namespace WindowsFormsApp2
                 comboBox1.Items.Add("Афанасьева, Михеева");
                 comboBox1.Items.Add("Пушкин");
                 comboBox1.Items.Add("Лермонтов");
+
 
 
             }
@@ -65,7 +75,7 @@ namespace WindowsFormsApp2
 
             if (name == "География")
             {
-                label2.Text = "GDZ.Putina по география" +
+                label2.Text = "GDZ.Putina по географии" +
                       Environment.NewLine +
                     "изучения климата России";
             }
@@ -183,6 +193,11 @@ namespace WindowsFormsApp2
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+        
         }
     }
 }

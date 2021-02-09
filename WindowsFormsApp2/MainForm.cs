@@ -121,5 +121,10 @@ namespace WindowsFormsApp2
             Registr form2 = new Registr();
             form2.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://web-online24.ru/vologda-web-camera-online-dodo-pitstsa"); 
+        }
     }
 }

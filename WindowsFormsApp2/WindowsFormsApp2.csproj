@@ -64,6 +64,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Продукты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Продукты.Designer.cs">
+      <DependentUpon>Продукты.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainForm.cs">
@@ -103,6 +109,9 @@
     <EmbeddedResource Include="Registr.resx">
       <DependentUpon>Registr.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Продукты.resx">
+      <DependentUpon>Продукты.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\английский.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\овощи.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\фастфуд.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
