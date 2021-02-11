@@ -26,14 +26,41 @@ namespace WindowsFormsApp2
        
 
             Text = name;
-            pictureBox1.Load("../../../pictures/" + name + ".jpg");
+            try
+            {
+                pictureBox1.Load("../../../pictures/" + name + ".jpg");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
+            
             
             string a = "GDZ.Putina по";
+
+            if (name == "Овощи")
+            {
+                //pictureBox1.Load("../../../Продукты/бургер.txt");
+                //pictureBox1.Load("../../../pictures/1.jpg");
+                label2.Text = " Овощи, свежие, вкусные, да";
+                //Environment.NewLine + 
+                //"сложно";
+
+
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Афанасьева, Михеева");
+                comboBox1.Items.Add("Пушкин");
+                comboBox1.Items.Add("Лермонтов");
+
+
+
+            }
 
             if (name == "Английский язык")
             {
                 pictureBox1.Load("../../../Продукты/бургер.txt");
                 //pictureBox1.Load("../../../pictures/1.jpg");
+                pictureBox2.Load("../../../pictures/1.jpg");
+                pictureBox3.Load("../../../pictures/1.jpg");
+                pictureBox4.Load("../../../pictures/1.jpg");
                 label2.Text = a + " английскому языку";
                     //Environment.NewLine + 
                     //"сложно";
@@ -198,6 +225,11 @@ namespace WindowsFormsApp2
         private void button2_Click_1(object sender, EventArgs e)
         {
         
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

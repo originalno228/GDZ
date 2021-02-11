@@ -113,6 +113,16 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap мороженное {
+            get {
+                object obj = ResourceManager.GetObject("мороженное", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap овощи {
             get {
                 object obj = ResourceManager.GetObject("овощи", resourceCulture);
@@ -123,9 +133,29 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Огурец {
+            get {
+                object obj = ResourceManager.GetObject("Огурец", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Русский {
             get {
                 object obj = ResourceManager.GetObject("Русский", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Томат {
+            get {
+                object obj = ResourceManager.GetObject("Томат", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

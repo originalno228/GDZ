@@ -11,44 +11,99 @@ using System.Windows.Forms;
 namespace WindowsFormsApp2
 {
 
-    public struct Uchebnik
+    public struct Food
     {
         public PictureBox picture;
         public Label label;
         public string name;
         public string str;
+        public int price;
 
     }
 
     public partial class Продукты : Form
     {
-        Uchebnik[] uchebniks = new Uchebnik[3];
+        Food[] eda = new Food[500];
         public Продукты()
         {
             InitializeComponent();
 
             //("../../../Продукты/бургер.txt");
-            uchebniks[0].label = label1;
-            uchebniks[0].name = "бургер";
-            uchebniks[0].picture = pictureBox1;
-            uchebniks[1].label = label2;
-            uchebniks[1].name = "овощи";
-            uchebniks[1].picture = pictureBox2;
-            uchebniks[2].label = label3;
-            uchebniks[2].name = "овощи";
-            uchebniks[2].picture = pictureBox3;
+            eda[0].label = label1;
+            eda[0].name = "овощи";
+            eda[0].picture = pictureBox1;
+            eda[0].price = 100;
+
+            eda[1].label = label2;
+            eda[1].name = "фастфуд";
+            eda[1].price = 50;
+            eda[1].picture = pictureBox2;
+
+            eda[2].label = label3;
+            eda[2].name = "вкусно";
+            eda[2].picture = pictureBox3;
+            eda[2].price = 1000;
+
+            eda[3].label = label5;
+            eda[3].name = "Томат";
+            eda[3].picture = pictureBox4;
+            eda[3].price = 9;
+
+            eda[4].label = label4;
+            eda[4].name = "Мороженное";
+            eda[4].picture = pictureBox5;
+            eda[4].price = 75;
+
+            for (int i = 0; i < 5; i++)
+            {
+                eda[i].label.Text = eda[i].price.ToString();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
-                uchebniks[i].picture.Visible = false;
-                if (!uchebniks[i].name.Contains(textBox1.Text))
+
+                eda[i].picture.Visible = true;
+
+                if (name.Text != "" &&
+                    !eda[i].name.ToUpper().Contains(name.Text.ToUpper()))
+                    eda[i].picture.Visible = false;
+
+                if (price.Text != "" &&
+                    Convert.ToInt32(price.Text) >= eda[i].price)
+                    eda[i].picture.Visible = false;
+
+                //eda[i].picture.Visible = false;
+                //if (!eda[i].name.Contains(textBox1.Text))
                     
-                    uchebniks[i].picture.Visible = true;
+                   // eda[i].picture.Visible = true;
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            EnglishForm newForm = new EnglishForm("Овощи");
+            newForm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            EnglishForm newForm = new EnglishForm("Фастфуд");
+            newForm.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            EnglishForm newForm = new EnglishForm("ДА");
+            newForm.Show();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
