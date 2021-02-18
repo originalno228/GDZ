@@ -51,13 +51,16 @@ namespace WindowsFormsApp2
 
             //время
             label1.Text = DateTime.Now.ToString("");
-          
+
+            int x = 10;
+            int y = 10;
             for (int i = 0; i < 5; i++)
             {
                 //--------------Картинка--------------------------------------
                 eda[i].picture = new PictureBox();
-                eda[i].picture.Location = new Point(10 + 180 * i, 10);
+                eda[i].picture.Location = new Point(x, y);
                 eda[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
+                eda[i].picture.Tag = eda[i].name;
 
                 eda[i].picture.Size = new Size(150, 150);
                 try//попытка загрузить картинку либо jpj либо png либо до связи
@@ -72,34 +75,39 @@ namespace WindowsFormsApp2
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
+                eda[i].picture.Click += new EventHandler(pictureBox1_Click);
                 panel1.Controls.Add(eda[i].picture);
 
                 //--------------Цена--------------------------------------
 
                 eda[i].labelPrice = new Label();
-                eda[i].labelPrice.Location = new Point(130 + 180 * i, 160);
+                if (eda[i].price <100)
+                {
+                    eda[i].labelPrice.ForeColor = Color.Red;
+                }
+                
+                eda[i].labelPrice.Location = new Point(x + 100, y + 150);
                 //eda[i].label.Location = new Point(300 * i, 200);
 
-                eda[i].labelPrice.Size = new Size(150, 30);
+                eda[i].labelPrice.Size = new Size(50, 30);
                 eda[i].labelPrice.Text = eda[i].price.ToString();
                 panel1.Controls.Add(eda[i].labelPrice);
 
                 //-----------------название----------------------------------------------
 
                 eda[i].labelName = new Label();
-                eda[i].labelName.Location = new Point(200 * i, 180);
+                eda[i].labelName.Location = new Point(x, y + 150);
 
                 eda[i].labelName.Size = new Size(100, 30);
                 eda[i].labelName.Text = eda[i].name;
                 panel1.Controls.Add(eda[i].labelName);
 
-                //Point(1000, 3000)
-               /* if (Point(x) > 1000):
+                x = x + 160;//
+                if (x + 120 > Width)
                 {
-                    Point = Point(0, y + 400)
-                }*/
-                
-
+                    y = y + 500;
+                    x = 10;
+                }
 
                 //----------------------------------------------------------------
 
@@ -109,13 +117,14 @@ namespace WindowsFormsApp2
         //сортировка по цене и названию
         private void button2_Click(object sender, EventArgs e)
         {
+            int x = 10;
+            int y = 10;
             for (int i = 0; i < 5; i++)
             {
-
                 eda[i].picture.Visible = true;
 
-                if (name.Text != "" &&
-                    !eda[i].name.ToUpper().Contains(name.Text.ToUpper()))//по названию
+                if (Poisk.Text != "" &&
+                    !eda[i].name.ToUpper().Contains(Poisk.Text.ToUpper()))//по названию
                     eda[i].picture.Visible = false;
 
                 try
@@ -126,33 +135,30 @@ namespace WindowsFormsApp2
                 }
                 catch (Exception) { }
 
-                //eda[i].picture.Visible = false;
-                //if (!eda[i].name.Contains(textBox1.Text)) 
-                   // eda[i].picture.Visible = true;
+                if (eda[i].picture.Visible)
+                {
+                    eda[i].picture.Location = new Point(x, y);
+                    eda[i].labelName.Location = new Point(x, y + 150);
+                    eda[i].labelPrice.Location = new Point(x+100, y + 150);
+                    x = x + 160;
+                    if (x + 120 > Width)
+                    {
+                        y = y + 180;
+                        x = 10;
+                    }
+                }
+
+
+                eda[i].labelName.Visible = eda[i].picture.Visible;
+                eda[i].labelPrice.Visible = eda[i].picture.Visible;
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("Овощи");
+            PictureBox pb = (PictureBox)sender;
+            ProductForm newForm = new ProductForm(pb.Tag.ToString());
             newForm.Show();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            EnglishForm newForm = new EnglishForm("Фастфуд");
-            newForm.Show();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            EnglishForm newForm = new EnglishForm("ДА");
-            newForm.Show();
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

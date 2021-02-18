@@ -45,51 +45,51 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("Английский язык");
+            ProductForm newForm = new ProductForm("Английский язык");
             newForm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("Русский язык");
+            ProductForm newForm = new ProductForm("Русский язык");
             newForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("Алгебра");
+            ProductForm newForm = new ProductForm("Алгебра");
             newForm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("Геометрия");
+            ProductForm newForm = new ProductForm("Геометрия");
             newForm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("География");
+            ProductForm newForm = new ProductForm("География");
             newForm.Show();
            // Image.
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm("Физика");
+            ProductForm newForm = new ProductForm("Физика");
             newForm.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            EnglishForm newForm = new EnglishForm(button7.Text);
+            ProductForm newForm = new ProductForm(button7.Text);
             newForm.Show();
         }
 
         private void OpenPrdemet(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            EnglishForm newForm = new EnglishForm(btn.Text);
+            ProductForm newForm = new ProductForm(btn.Text);
             newForm.Show();
         }
 
