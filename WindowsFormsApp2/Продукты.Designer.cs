@@ -45,6 +45,7 @@ namespace WindowsFormsApp2
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(368, 11);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 71);
@@ -55,6 +56,7 @@ namespace WindowsFormsApp2
             // 
             // Poisk
             // 
+            this.Poisk.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Poisk.Location = new System.Drawing.Point(122, 9);
             this.Poisk.Name = "Poisk";
             this.Poisk.Size = new System.Drawing.Size(167, 34);
@@ -63,6 +65,7 @@ namespace WindowsFormsApp2
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Cursor = System.Windows.Forms.Cursors.No;
             this.label14.Location = new System.Drawing.Point(5, 9);
             this.label14.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label14.Name = "label14";
@@ -74,6 +77,7 @@ namespace WindowsFormsApp2
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.No;
             this.label6.Location = new System.Drawing.Point(5, 43);
             this.label6.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label6.Name = "label6";
@@ -84,6 +88,7 @@ namespace WindowsFormsApp2
             // 
             // price
             // 
+            this.price.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.price.Location = new System.Drawing.Point(122, 48);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(167, 34);
@@ -93,8 +98,10 @@ namespace WindowsFormsApp2
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label8);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(3, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1011, 453);
@@ -131,6 +138,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.No;
             this.label2.Location = new System.Drawing.Point(673, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 29);
@@ -140,10 +148,12 @@ namespace WindowsFormsApp2
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Cursor = System.Windows.Forms.Cursors.No;
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(701, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(290, 29);
+            this.label3.Size = new System.Drawing.Size(292, 31);
             this.label3.TabIndex = 54;
             this.label3.Text = "Сегодня красная среда!";
             // 

@@ -14,14 +14,32 @@ namespace WindowsFormsApp2
     public partial class ProductForm : Form
     {
         string predmet;
-        //Uchebnik[] uchebniks = new Uchebnik[3];   
+        //Uchebnik[] uchebniks = new Uchebnik[3];  
+    
+
+        private static Point MouseDownLocation;//движения pictureBox1 за мышкой
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                MouseDownLocation = e.Location;
+            }
+        }
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBox1.Left = e.X + pictureBox1.Left - MouseDownLocation.X;
+                pictureBox1.Top = e.Y + pictureBox1.Top - MouseDownLocation.Y;
+            }
+        }
+
         public ProductForm(string name)
         {
-           
-
+            InitializeComponent();
 
             predmet = name;
-            InitializeComponent();
+            //InitializeComponent();
 
 
             //label5 = kolvo.Value;

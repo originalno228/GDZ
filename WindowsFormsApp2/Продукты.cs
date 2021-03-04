@@ -86,7 +86,7 @@ namespace WindowsFormsApp2
                     eda[i].labelPrice.ForeColor = Color.Red;
                 }
                 
-                eda[i].labelPrice.Location = new Point(eda[i].picture.Location.X + 110, eda[i].picture.Location.Y + 150);
+                eda[i].labelPrice.Location = new Point(eda[i].picture.Location.X + 130, eda[i].picture.Location.Y + 150);
                 //eda[i].labelPrice.Location = new Point(eda[i].picture.Location.X, eda[i].picture.y);
                 //eda[i].label.Location = new Point(300 * i, 200);
 
