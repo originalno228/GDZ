@@ -174,7 +174,7 @@ namespace WindowsFormsApp2
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Продукты";
-            this.Text = "ауе";
+            this.Text = "Семерочка";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
