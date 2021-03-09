@@ -19,6 +19,7 @@ namespace WindowsFormsApp2
         public string name;
         public string str;
         public int price;
+        public string category;
 
     }
 
@@ -30,31 +31,49 @@ namespace WindowsFormsApp2
             InitializeComponent();
 
 
-
             //eda[0].picture = pictureBox1;
             //("../../../Продукты/бургер.txt");
             //eda[0].label2 = "a";
             eda[0].name = "овощи";
             eda[0].price = 100;
+            
 
             eda[1].name = "фастфуд";
             eda[1].price = 50;
 
             eda[2].name = "Огурец";
             eda[2].price = 1000;
+            eda[0].category = "фрукт";
 
             eda[3].name = "Томат";
             eda[3].price = 9;
+            eda[0].category = "фрукт";
 
             eda[4].name = "Мороженное";
             eda[4].price = 75;
+
+            eda[5].name = "Банан";
+            eda[5].price = 4;
+            eda[5].category = "фрукт";
+
+            eda[6].name = "Груша";
+            eda[6].price = 4;
+            eda[6].category = "фрукт";
+
+            eda[7].name = "Кокос";
+            eda[7].price = 400;
+            eda[7].category = "фрукт";
+
+            eda[8].name = "Яблоко";
+            eda[8].price = 400;
+            eda[8].category = "фрукт";
 
             //время
             label1.Text = DateTime.Now.ToString("");
 
             int x = 10;
             int y = 10;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 9; i++)
             {
                 //--------------Картинка--------------------------------------
                 eda[i].picture = new PictureBox();
@@ -97,17 +116,19 @@ namespace WindowsFormsApp2
                 //-----------------название----------------------------------------------
 
                 eda[i].labelName = new Label();
-                eda[i].labelName.Location = new Point(x, y + 150);
+                eda[i].labelName.Location = new Point(x + 20, y + 150);
 
                 eda[i].labelName.Size = new Size(100, 30);
                 eda[i].labelName.Text = eda[i].name;
                 panel1.Controls.Add(eda[i].labelName);
 
-                x = x + 160;//
+                x = x + 160;//регулируется выход за рамки экрана если еды много
                 if (x + 120 > Width)
                 {
-                    y = y + 500;
+                    y = y + 180;
                     x = 10;
+
+                    eda[i].labelPrice.Location = new Point(eda[i].picture.Location.X + 130, eda[i].picture.Location.Y + 150);
                 }
 
                 //----------------------------------------------------------------

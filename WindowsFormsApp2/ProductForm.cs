@@ -174,8 +174,7 @@ namespace WindowsFormsApp2
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MainForm newForm = new MainForm();
-            newForm.Show();
+            this.Close();
         }
 
         private void EnglishForm_Load(object sender, EventArgs e)

@@ -18,8 +18,8 @@ namespace WindowsFormsApp2
             if (textBox1.Text != "" || textBox2.Text != "")
             {
                 Program.LOGIN = "aue";
-                Admin newForm = new Admin();
-                newForm.Show();
+                //Admin newForm = new Admin();
+                //newForm.Show();
             }
             else
                 MessageBox.Show("Введите хоть что-то ну епт");

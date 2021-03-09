@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
             this.Poisk.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Poisk.Location = new System.Drawing.Point(122, 9);
             this.Poisk.Name = "Poisk";
-            this.Poisk.Size = new System.Drawing.Size(167, 34);
+            this.Poisk.Size = new System.Drawing.Size(167, 29);
             this.Poisk.TabIndex = 39;
             // 
             // label14
@@ -69,7 +69,7 @@ namespace WindowsFormsApp2
             this.label14.Location = new System.Drawing.Point(5, 9);
             this.label14.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 29);
+            this.label14.Size = new System.Drawing.Size(90, 24);
             this.label14.TabIndex = 38;
             this.label14.Text = "Продукт:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -81,7 +81,7 @@ namespace WindowsFormsApp2
             this.label6.Location = new System.Drawing.Point(5, 43);
             this.label6.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 29);
+            this.label6.Size = new System.Drawing.Size(89, 24);
             this.label6.TabIndex = 49;
             this.label6.Text = "Бюджет:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,7 +91,7 @@ namespace WindowsFormsApp2
             this.price.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.price.Location = new System.Drawing.Point(122, 48);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(167, 34);
+            this.price.Size = new System.Drawing.Size(167, 29);
             this.price.TabIndex = 50;
             // 
             // panel1
@@ -112,7 +112,7 @@ namespace WindowsFormsApp2
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(629, 685);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 29);
+            this.label4.Size = new System.Drawing.Size(54, 24);
             this.label4.TabIndex = 57;
             this.label4.Text = "Цена";
             // 
@@ -122,7 +122,7 @@ namespace WindowsFormsApp2
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(28, 717);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 29);
+            this.label8.Size = new System.Drawing.Size(66, 24);
             this.label8.TabIndex = 52;
             this.label8.Text = "Томат";
             // 
@@ -131,7 +131,7 @@ namespace WindowsFormsApp2
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(837, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 29);
+            this.label1.Size = new System.Drawing.Size(136, 24);
             this.label1.TabIndex = 52;
             this.label1.Text = "тут время лол";
             // 
@@ -141,7 +141,7 @@ namespace WindowsFormsApp2
             this.label2.Cursor = System.Windows.Forms.Cursors.No;
             this.label2.Location = new System.Drawing.Point(673, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 29);
+            this.label2.Size = new System.Drawing.Size(160, 24);
             this.label2.TabIndex = 53;
             this.label2.Text = "Проект запущен:";
             // 
@@ -153,13 +153,13 @@ namespace WindowsFormsApp2
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(701, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 31);
+            this.label3.Size = new System.Drawing.Size(229, 26);
             this.label3.TabIndex = 54;
             this.label3.Text = "Сегодня красная среда!";
             // 
             // Продукты
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 546);
             this.Controls.Add(this.label3);
