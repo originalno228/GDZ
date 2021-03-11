@@ -45,10 +45,6 @@ namespace WindowsFormsApp2
             //if (textBox1.Text == '1')
 
             this.Close();
-            MainForm form2 = new MainForm();
-            this.Visible = false;
-            form2.Show();
-            this.Visible = true;
             
         }
 

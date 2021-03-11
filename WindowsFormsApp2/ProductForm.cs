@@ -14,6 +14,7 @@ namespace WindowsFormsApp2
     public partial class ProductForm : Form
     {
         string predmet;
+        Food vybrannaja_eda;
         //Uchebnik[] uchebniks = new Uchebnik[3];  
     
 
@@ -39,110 +40,38 @@ namespace WindowsFormsApp2
             InitializeComponent();
 
             predmet = name;
-            //InitializeComponent();
-
-
-            //label5 = kolvo.Value;
 
             Text = name;
+            
+            foreach (Food food in Продукты.eda)
+            {
+                //vybrannaja_eda = food.price * kolvo.Value;
+                //прилетает цена с другой формы
+                if (food.name == name)
+                {
+                    vybrannaja_eda = food;
+                    label2.Text = "Цена: " + food.price.ToString();
+                    label5.Text = (vybrannaja_eda.price * kolvo.Value).ToString();
+                }
+            }
+
             try
             {
                 pictureBox1.Load("../../../Продукты/" + name + ".jpg");
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
-            
-            
-            string a = "GDZ.Putina по";
-
-            if (name == "Овощи")
-            {
-                //pictureBox1.Load("../../../Продукты/бургер.txt");
-                //pictureBox1.Load("../../../pictures/1.jpg");
-                label2.Text = " Овощи, свежие, вкусные, да";
-                //Environment.NewLine + 
-                //"сложно";
-
-
-              
-
-
-
-            }
-
-            if (name == "Английский язык")
-            {
-                pictureBox1.Load("../../../Продукты/бургер.txt");
-                label2.Text = a + " английскому языку";
-                    //Environment.NewLine + 
-                    //"сложно";
-
-
-
-
-            }
-            if (name == "Русский язык")
-            {
-                label2.Text = "GDZ.Putinaf по русскому языку" +
-                      Environment.NewLine +
-                    "платно";
-
-                //this.
-                this.BackColor = Color.Green;
-                //this.BackColor = ColorTranslator.FromHtml("#FFFFFF");
-            }
-            if (name == "Алгебра")
-            {
-                label2.Text = "GDZ.Putina по алгебре" +
-                      Environment.NewLine +
-                    "Решение уравнений";
-                this.BackColor = Color.Yellow;
-            }
-
-            if (name == "Геометрия")
-            {
-                label2.Text = "геометрии" +
-                      Environment.NewLine +
-                    "7-9 класс, много теорем -__-";
-                this.BackColor = Color.Black;
-            }
-
-            if (name == "География")
-            {
-                label2.Text = "GDZ.Putina по географии" +
-                      Environment.NewLine +
-                    "изучения климата России";
-            }
-            if (name == "Физика")
-            {
-                label2.Text = "GDZ.Putina по физике" +
-                      Environment.NewLine +
-                    "Тепловые явление";
-            }
-
-            if (name == "Химия")
-            {
-                label2.Text = "GDZ.Putina по химии" +
-                      Environment.NewLine +
-                    "Соли, кислоты, оксиды...";
-            }
-
-            if (name == "История")
-            {
-                label2.Text = "GDZ.Putina по алгебре" +
-                      Environment.NewLine +
-                    "История России";
-            }
+         
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            //vybrannaja_eda = Продукты.eda[i].price * kolvo.Value;
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -199,12 +128,7 @@ namespace WindowsFormsApp2
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            if (kolvo.Value == 2)
-            {
-                pictureBox1.Load("../../../pictures/Химия.jpg");
-
-
-            }
+            label5.Text = (vybrannaja_eda.price * kolvo.Value).ToString();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -39,14 +39,15 @@ namespace WindowsFormsApp2
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.categorys = new System.Windows.Forms.CheckedListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(368, 11);
+            this.button2.Location = new System.Drawing.Point(317, 11);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 71);
             this.button2.TabIndex = 40;
@@ -96,6 +97,9 @@ namespace WindowsFormsApp2
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -104,7 +108,7 @@ namespace WindowsFormsApp2
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(3, 88);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1011, 453);
+            this.panel1.Size = new System.Drawing.Size(835, 453);
             this.panel1.TabIndex = 51;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -129,8 +133,9 @@ namespace WindowsFormsApp2
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(837, 0);
+            this.label1.Location = new System.Drawing.Point(816, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 29);
             this.label1.TabIndex = 52;
@@ -138,32 +143,50 @@ namespace WindowsFormsApp2
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.No;
-            this.label2.Location = new System.Drawing.Point(673, 0);
+            this.label2.Location = new System.Drawing.Point(662, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 29);
             this.label2.TabIndex = 53;
             this.label2.Text = "Проект запущен:";
             // 
-            // label3
+            // categorys
             // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Cursor = System.Windows.Forms.Cursors.No;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(701, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 31);
-            this.label3.TabIndex = 54;
-            this.label3.Text = "Сегодня красная среда!";
+            this.categorys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.categorys.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categorys.FormattingEnabled = true;
+            this.categorys.Items.AddRange(new object[] {
+            "Фрукты",
+            "Овощи",
+            "Фастфуд",
+            "Соки"});
+            this.categorys.Location = new System.Drawing.Point(856, 109);
+            this.categorys.Name = "categorys";
+            this.categorys.Size = new System.Drawing.Size(149, 120);
+            this.categorys.TabIndex = 55;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.No;
+            this.label5.Location = new System.Drawing.Point(851, 77);
+            this.label5.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 29);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "Категория:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Продукты
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 546);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.categorys);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -195,6 +218,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckedListBox categorys;
+        private System.Windows.Forms.Label label5;
     }
 }

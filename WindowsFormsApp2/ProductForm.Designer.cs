@@ -47,6 +47,7 @@ namespace WindowsFormsApp2
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(26, 382);
@@ -83,6 +84,7 @@ namespace WindowsFormsApp2
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(573, -2);
@@ -97,6 +99,7 @@ namespace WindowsFormsApp2
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.Lime;
             this.button4.Location = new System.Drawing.Point(723, 377);
             this.button4.Name = "button4";
@@ -118,7 +121,7 @@ namespace WindowsFormsApp2
             this.kolvo.Size = new System.Drawing.Size(79, 36);
             this.kolvo.TabIndex = 30;
             this.kolvo.Value = new decimal(new int[] {
-            500,
+            1,
             0,
             0,
             0});
@@ -142,7 +145,7 @@ namespace WindowsFormsApp2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(278, 92);
+            this.label4.Location = new System.Drawing.Point(268, 92);
             this.label4.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 29);
@@ -153,7 +156,7 @@ namespace WindowsFormsApp2
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(493, 92);
+            this.label5.Location = new System.Drawing.Point(483, 92);
             this.label5.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 29);
@@ -164,6 +167,7 @@ namespace WindowsFormsApp2
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackColor = System.Drawing.Color.Lime;
             this.button2.Location = new System.Drawing.Point(235, 377);
             this.button2.Name = "button2";
