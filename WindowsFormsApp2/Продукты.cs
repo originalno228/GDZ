@@ -29,11 +29,18 @@ namespace WindowsFormsApp2
             name = _name;
             price = _price;
         }
-     }
+    }
 
     public partial class Продукты : Form
     {
         public static List<Food> eda = new List<Food>();
+
+
+        public static Korzina[] korz = new Korzina[10];
+        /// <summary>
+        /// Собираем хавчик пацанам на зону
+        /// </summary>
+        public static List<Food> aue = new List<Food>();
         public Продукты()
         {
             InitializeComponent();

@@ -23,3 +23,15 @@ C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp2\obj\Debug\Се
 C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp2\obj\Debug\Семерочка.csproj.CoreCompileInputs.cache
 C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\Семерочка.csprojAssemblyReference.cache
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ProductForm.resources
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Registr.resources
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Продукты.resources
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\Семерочка.csproj.GenerateResource.cache
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\Семерочка.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\user\Downloads\GDZ-main (7)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb

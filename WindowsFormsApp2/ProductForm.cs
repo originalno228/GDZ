@@ -35,9 +35,18 @@ namespace WindowsFormsApp2
             }
         }
 
+        Food food;
         public ProductForm(string name)
         {
             InitializeComponent();
+
+            foreach (Food food1 in Продукты.aue)
+            {
+                if (food.name == name)
+                {
+                    food = food1;
+                }
+            }
 
             predmet = name;
 
@@ -155,5 +164,17 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+            Продукты.aue.Add(vybrannaja_eda);
+            //PictureBox pb = (PictureBox)sender;
+            Korzina newForm = new Korzina();
+            newForm.Show();
+            //Korzina.Show();
+        }
+        
+
+        
     }
 }
