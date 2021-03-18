@@ -38,6 +38,7 @@ namespace WindowsFormsApp2
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,10 +89,12 @@ namespace WindowsFormsApp2
             this.textBox1.Size = new System.Drawing.Size(366, 34);
             this.textBox1.TabIndex = 28;
             this.textBox1.Text = "Логин";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.checkBox1.Location = new System.Drawing.Point(422, 308);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(5);
@@ -107,27 +110,30 @@ namespace WindowsFormsApp2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(363, 19);
+            this.label2.Location = new System.Drawing.Point(497, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(18, 0, 18, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 39);
+            this.label2.Size = new System.Drawing.Size(56, 39);
             this.label2.TabIndex = 31;
-            this.label2.Text = "GDZ.Putina.Ru";
+            this.label2.Text = "да";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(431, 360);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(360, 360);
             this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 86);
+            this.button4.Size = new System.Drawing.Size(173, 86);
             this.button4.TabIndex = 37;
-            this.button4.Text = "Войти";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Text = "Вход";
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(310, 466);
             this.pictureBox1.Name = "pictureBox1";
@@ -137,11 +143,25 @@ namespace WindowsFormsApp2
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(552, 360);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 86);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Регистрация";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Registr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 540);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -170,5 +190,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
     }
 }

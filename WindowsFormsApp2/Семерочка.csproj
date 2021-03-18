@@ -77,6 +77,9 @@
     <Compile Include="Registr.Designer.cs">
       <DependentUpon>Registr.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Korzina.resx">
+      <DependentUpon>Korzina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>

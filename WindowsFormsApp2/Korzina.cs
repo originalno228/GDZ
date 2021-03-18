@@ -16,15 +16,28 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
 
+           
             int x = 0;
             int y = 0;
-            foreach (Food eda in Продукты.aue)
+            //foreach (Food eda in Продукты.aue)
+            foreach (KeyValuePair<Food, int> eda1 in Продукты.korz228)
             {
+                Food eda = eda1.Key;
+                int count = eda1.Value;
+
+                
+
                 PictureBox picture = new PictureBox();
                 picture.Location = new Point(x, y);
                 picture.SizeMode = PictureBoxSizeMode.Zoom;
                 picture.Tag = eda.name;
 
+                Label lablecount = new Label();
+                lablecount.Location = new Point(x, y + 160);
+                lablecount.Size = new Size(100, 30);
+                lablecount.Text = eda.name + " (" + count.ToString() + ")";
+                lablecount.Font = new Font("Tahoma", 9, FontStyle.Bold);
+                //MessageBox.Show(eda.name + " (" + count.ToString() + ")");
 
                 picture.Size = new Size(150, 150);
                 try//попытка загрузить картинку либо jpj либо png либо до связи
@@ -41,6 +54,7 @@ namespace WindowsFormsApp2
                 }
                // picture.Click += new EventHandler(Продукты.pictureBox1_Click);
                 Controls.Add(picture);
+                Controls.Add(lablecount);
 
 
                 x = x + 160;
@@ -50,6 +64,11 @@ namespace WindowsFormsApp2
                     x = 10;
                 }
             }
+        }
+
+        private void Korzina_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

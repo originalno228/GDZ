@@ -36,14 +36,19 @@ namespace WindowsFormsApp2
         public static List<Food> eda = new List<Food>();
 
 
-        public static Korzina[] korz = new Korzina[10];
+        //public static Korzina[] korz = new Korzina[10];
         /// <summary>
         /// Собираем хавчик пацанам на зону
         /// </summary>
         public static List<Food> aue = new List<Food>();
+        //создание словаря полезно
+        public static Dictionary<Food, int> korz228 = new Dictionary<Food, int>();
+
+        public static string akkaunt = "";
         public Продукты()
         {
             InitializeComponent();
+            loginLabel.Text = akkaunt + "2";
             // this.WindowState = FormWindowState.Maximized;
             //this.Width = Screen.PrimaryScreen.WorkingArea.Width;
             //this.Height = Screen.PrimaryScreen.WorkingArea.Height;
@@ -213,6 +218,20 @@ namespace WindowsFormsApp2
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ты лох?", "Предупреждение", MessageBoxButtons.YesNoCancel);
+            Korzina newForm = new Korzina();
+            newForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Registr newForm = new Registr();
+            newForm.ShowDialog();
+            loginLabel.Text = akkaunt;
         }
     }
 }

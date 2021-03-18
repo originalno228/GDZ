@@ -64,33 +64,12 @@ namespace WindowsFormsApp2
                 }
             }
 
-            try
-            {
-                pictureBox1.Load("../../../Продукты/" + name + ".jpg");
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-
-         
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
+            pictureBox1.Image = vybrannaja_eda.picture.Image;   
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //vybrannaja_eda = Продукты.eda[i].price * kolvo.Value;
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -115,66 +94,26 @@ namespace WindowsFormsApp2
             this.Close();
         }
 
-        private void EnglishForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             label5.Text = (vybrannaja_eda.price * kolvo.Value).ToString();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox2_Click_2(object sender, EventArgs e)
         {
             Продукты.aue.Add(vybrannaja_eda);
-            //PictureBox pb = (PictureBox)sender;
-            Korzina newForm = new Korzina();
-            newForm.Show();
-            //Korzina.Show();
-        }
-        
 
-        
+            if (!Продукты.korz228.ContainsKey(vybrannaja_eda))
+                Продукты.korz228.Add(vybrannaja_eda, 1);
+            else
+                Продукты.korz228[vybrannaja_eda] = Продукты.korz228[vybrannaja_eda] + 1;
+
+            label1.Visible = true;
+            //PictureBox pb = (PictureBox)sender;
+            //Korzina newForm = new Korzina();
+            //newForm.Show();
+        }
     }
 }
