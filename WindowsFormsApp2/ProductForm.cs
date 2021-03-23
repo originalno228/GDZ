@@ -115,5 +115,22 @@ namespace WindowsFormsApp2
             //Korzina newForm = new Korzina();
             //newForm.Show();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Продукты.aue.Add(vybrannaja_eda);
+
+            if (!Продукты.korz228.ContainsKey(vybrannaja_eda))
+                Продукты.korz228.Add(vybrannaja_eda, 1);
+            else
+                Продукты.korz228[vybrannaja_eda] = Продукты.korz228[vybrannaja_eda] + 1;
+
+            label1.Visible = true;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

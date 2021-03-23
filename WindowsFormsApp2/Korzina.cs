@@ -16,7 +16,7 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
 
-           
+            int prices = 0;
             int x = 0;
             int y = 0;
             //foreach (Food eda in Продукты.aue)
@@ -53,9 +53,9 @@ namespace WindowsFormsApp2
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
                // picture.Click += new EventHandler(Продукты.pictureBox1_Click);
-                Controls.Add(picture);
-                Controls.Add(lablecount);
-
+                panel1.Controls.Add(picture);
+                panel1.Controls.Add(lablecount);
+                prices += eda.price * count; //подсчет итоговой цены
 
                 x = x + 160;
                 if (x + 120 > Width)
@@ -64,11 +64,19 @@ namespace WindowsFormsApp2
                     x = 10;
                 }
             }
+
+            label2.Text = prices.ToString();
+
         }
 
         private void Korzina_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();//закрыть все
         }
     }
 }

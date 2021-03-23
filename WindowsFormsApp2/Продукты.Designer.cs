@@ -36,8 +36,6 @@ namespace WindowsFormsApp2
             this.label6 = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.categorys = new System.Windows.Forms.CheckedListBox();
@@ -45,7 +43,6 @@ namespace WindowsFormsApp2
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.loginLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +53,7 @@ namespace WindowsFormsApp2
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 71);
             this.button2.TabIndex = 40;
-            this.button2.Text = "Найти";
+            this.button2.Text = "Enter";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -67,6 +64,7 @@ namespace WindowsFormsApp2
             this.Poisk.Name = "Poisk";
             this.Poisk.Size = new System.Drawing.Size(167, 34);
             this.Poisk.TabIndex = 39;
+            this.Poisk.KeyDown += new System.Windows.Forms.KeyEventHandler(this.poisk_KeyDown);
             // 
             // label14
             // 
@@ -99,6 +97,7 @@ namespace WindowsFormsApp2
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(167, 34);
             this.price.TabIndex = 50;
+            this.price.KeyDown += new System.Windows.Forms.KeyEventHandler(this.poisk_KeyDown);
             // 
             // panel1
             // 
@@ -108,33 +107,12 @@ namespace WindowsFormsApp2
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(3, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(835, 453);
             this.panel1.TabIndex = 51;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(629, 685);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 29);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Цена";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(28, 717);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 29);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Томат";
             // 
             // label1
             // 
@@ -160,6 +138,7 @@ namespace WindowsFormsApp2
             // categorys
             // 
             this.categorys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.categorys.CheckOnClick = true;
             this.categorys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.categorys.FormattingEnabled = true;
             this.categorys.Items.AddRange(new object[] {
@@ -171,6 +150,8 @@ namespace WindowsFormsApp2
             this.categorys.Name = "categorys";
             this.categorys.Size = new System.Drawing.Size(149, 120);
             this.categorys.TabIndex = 55;
+            this.categorys.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.categorys_ItemCheck);
+            this.categorys.SelectedValueChanged += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -209,6 +190,7 @@ namespace WindowsFormsApp2
             // 
             // loginLabel
             // 
+            this.loginLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.loginLabel.AutoSize = true;
             this.loginLabel.Location = new System.Drawing.Point(888, 393);
             this.loginLabel.Name = "loginLabel";
@@ -238,8 +220,7 @@ namespace WindowsFormsApp2
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Продукты";
             this.Text = "Семерочка";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Resize += new System.EventHandler(this.button2_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -254,8 +235,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox price;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox categorys;

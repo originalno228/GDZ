@@ -43,7 +43,7 @@ namespace WindowsFormsApp2
             else
                 MessageBox.Show("Введите хоть что-то ну епт");
 
-            if (textBox1.Text == "1" && textBox2.Text == "1") ;
+            if (textBox1.Text == "1" && textBox2.Text == "1");
             {
                 //Продукты newForm = new Продукты();
                 //newForm.Show();

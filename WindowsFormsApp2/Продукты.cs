@@ -222,7 +222,7 @@ namespace WindowsFormsApp2
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Ты лох?", "Предупреждение", MessageBoxButtons.YesNoCancel);
+           // MessageBox.Show("Ты лох?", "Предупреждение", MessageBoxButtons.YesNoCancel);
             Korzina newForm = new Korzina();
             newForm.Show();
         }
@@ -232,6 +232,16 @@ namespace WindowsFormsApp2
             Registr newForm = new Registr();
             newForm.ShowDialog();
             loginLabel.Text = akkaunt;
+        }
+
+        private void categorys_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+        }
+
+        private void poisk_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                button2_Click(null, null);
         }
     }
 }
