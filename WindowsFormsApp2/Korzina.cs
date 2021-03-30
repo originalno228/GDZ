@@ -12,9 +12,23 @@ namespace WindowsFormsApp2
 {
     public partial class Korzina : Form
     {
+
+        void translate(Dictionary<string, string> Words)
+        {
+            label1.Text = Words["Общая цена:"];
+            label2.Text = Words["Общая цена:"];
+            //label6.Text = Words["Бюджет"];
+        }
         public Korzina()
         {
             InitializeComponent();
+
+            if (Продукты.Language == "Английский")
+                translate(Продукты.Eng_word);
+            if (Продукты.Language == "Русский")
+                translate(Продукты.Ru_word);
+
+
 
             int prices = 0;
             int x = 0;
@@ -32,6 +46,8 @@ namespace WindowsFormsApp2
                 picture.SizeMode = PictureBoxSizeMode.Zoom;
                 picture.Tag = eda.name;
 
+               
+
                 Label lablecount = new Label();
                 lablecount.Location = new Point(x, y + 160);
                 lablecount.Size = new Size(100, 30);
@@ -40,6 +56,8 @@ namespace WindowsFormsApp2
                 //MessageBox.Show(eda.name + " (" + count.ToString() + ")");
 
                 picture.Size = new Size(150, 150);
+
+                
                 try//попытка загрузить картинку либо jpj либо png либо до связи
                 {
                     picture.Load("../../../Продукты/" + eda.name + ".jpg");
@@ -52,10 +70,22 @@ namespace WindowsFormsApp2
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
-               // picture.Click += new EventHandler(Продукты.pictureBox1_Click);
+
+                PictureBox minus = new PictureBox();
+                minus.Location = new Point(x + 120, y + 150);
+                minus.Size = new Size(30, 30);
+                minus.SizeMode = PictureBoxSizeMode.Zoom;
+                minus.Tag = eda.name;
+                minus.Load("../../../pictures/минус.png");
+
+
+                // picture.Click += new EventHandler(Продукты.pictureBox1_Click);
+
+                panel1.Controls.Add(minus);
                 panel1.Controls.Add(picture);
                 panel1.Controls.Add(lablecount);
                 prices += eda.price * count; //подсчет итоговой цены
+                
 
                 x = x + 160;
                 if (x + 120 > Width)

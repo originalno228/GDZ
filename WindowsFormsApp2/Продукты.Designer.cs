@@ -43,6 +43,8 @@ namespace WindowsFormsApp2
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.loginLabel = new System.Windows.Forms.Label();
+            this.Button_Eng = new System.Windows.Forms.Button();
+            this.Button_Ru = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +153,7 @@ namespace WindowsFormsApp2
             this.categorys.Size = new System.Drawing.Size(149, 120);
             this.categorys.TabIndex = 55;
             this.categorys.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.categorys_ItemCheck);
+            this.categorys.SelectedIndexChanged += new System.EventHandler(this.categorys_SelectedIndexChanged);
             this.categorys.SelectedValueChanged += new System.EventHandler(this.button2_Click);
             // 
             // label5
@@ -198,11 +201,33 @@ namespace WindowsFormsApp2
             this.loginLabel.TabIndex = 59;
             this.loginLabel.Text = "Аноним";
             // 
+            // Button_Eng
+            // 
+            this.Button_Eng.Location = new System.Drawing.Point(656, 41);
+            this.Button_Eng.Name = "Button_Eng";
+            this.Button_Eng.Size = new System.Drawing.Size(75, 41);
+            this.Button_Eng.TabIndex = 62;
+            this.Button_Eng.Text = "Eng";
+            this.Button_Eng.UseVisualStyleBackColor = true;
+            this.Button_Eng.Click += new System.EventHandler(this.Button_Eng_Click_1);
+            // 
+            // Button_Ru
+            // 
+            this.Button_Ru.Location = new System.Drawing.Point(746, 42);
+            this.Button_Ru.Name = "Button_Ru";
+            this.Button_Ru.Size = new System.Drawing.Size(75, 39);
+            this.Button_Ru.TabIndex = 63;
+            this.Button_Ru.Text = "Ru";
+            this.Button_Ru.UseVisualStyleBackColor = true;
+            this.Button_Ru.Click += new System.EventHandler(this.Button_Ru_Click_1);
+            // 
             // Продукты
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 546);
+            this.Controls.Add(this.Button_Ru);
+            this.Controls.Add(this.Button_Eng);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -242,5 +267,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label loginLabel;
+        private System.Windows.Forms.Button Button_Eng;
+        private System.Windows.Forms.Button Button_Ru;
     }
 }
