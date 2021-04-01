@@ -15,12 +15,13 @@ namespace WindowsFormsApp2
 
         void translate(Dictionary<string, string> Words)
         {
-            label1.Text = Words["Общая цена:"];
-            label2.Text = Words["Общая цена:"];
+            label1.Text = Words["Общая цена"] + ":";
+            button2.Text = Words["Оплатить и выйти"];
             //label6.Text = Words["Бюджет"];
         }
         public Korzina()
         {
+
             InitializeComponent();
 
             if (Продукты.Language == "Английский")
@@ -28,7 +29,8 @@ namespace WindowsFormsApp2
             if (Продукты.Language == "Русский")
                 translate(Продукты.Ru_word);
 
-
+            //время
+            label3.Text = DateTime.Now.ToString("");
 
             int prices = 0;
             int x = 0;
@@ -107,6 +109,29 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();//закрыть все
+        }
+
+        private void Button_Eng_Click(object sender, EventArgs e)
+        {
+            translate(Продукты.Eng_word);
+        }
+
+        private void Button_Ru_Click(object sender, EventArgs e)
+        {
+            translate(Продукты.Ru_word);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                BackColor = colorDialog1.Color;
+            }
         }
     }
 }

@@ -34,11 +34,26 @@ namespace WindowsFormsApp2
                 pictureBox1.Top = e.Y + pictureBox1.Top - MouseDownLocation.Y;
             }
         }
+        void translate(Dictionary<string, string> Words)
+        {
+            label6.Text = Words["Успешно отправлено"];
+            label6.Text = Words["Описание"] + ":";
+            button1.Text = Words["Темная тема"];
+            button3.Text = Words["Добавить в корзину"];
+            
+            //label6.Text = Words["Бюджет"];
+        }
 
         Food food;
         public ProductForm(string name)
         {
             InitializeComponent();
+
+
+            if (Продукты.Language == "Английский")
+                translate(Продукты.Eng_word);
+            if (Продукты.Language == "Русский")
+                translate(Продукты.Ru_word);
 
             foreach (Food food1 in Продукты.aue)
             {
@@ -117,7 +132,8 @@ namespace WindowsFormsApp2
         }
 
         private void button3_Click_1(object sender, EventArgs e)
-        {
+        { 
+
             Продукты.aue.Add(vybrannaja_eda);
 
             if (!Продукты.korz228.ContainsKey(vybrannaja_eda))
@@ -131,6 +147,14 @@ namespace WindowsFormsApp2
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                BackColor = colorDialog1.Color;
+            }
         }
     }
 }

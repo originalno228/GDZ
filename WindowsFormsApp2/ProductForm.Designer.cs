@@ -42,8 +42,14 @@ namespace WindowsFormsApp2
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Button_Ru = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Button_Eng = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolvo)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -91,7 +97,7 @@ namespace WindowsFormsApp2
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(573, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(358, 319);
+            this.pictureBox1.Size = new System.Drawing.Size(326, 305);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -102,7 +108,7 @@ namespace WindowsFormsApp2
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.Lime;
-            this.button4.Location = new System.Drawing.Point(723, 377);
+            this.button4.Location = new System.Drawing.Point(573, 323);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(181, 91);
             this.button4.TabIndex = 22;
@@ -190,6 +196,63 @@ namespace WindowsFormsApp2
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.Button_Ru);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.Button_Eng);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel2.Location = new System.Drawing.Point(779, 351);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(175, 122);
+            this.panel2.TabIndex = 65;
+            // 
+            // Button_Ru
+            // 
+            this.Button_Ru.Location = new System.Drawing.Point(83, 49);
+            this.Button_Ru.Name = "Button_Ru";
+            this.Button_Ru.Size = new System.Drawing.Size(75, 41);
+            this.Button_Ru.TabIndex = 63;
+            this.Button_Ru.Text = "Ru";
+            this.Button_Ru.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(-6, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(177, 29);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "тут время лол";
+            // 
+            // Button_Eng
+            // 
+            this.Button_Eng.Location = new System.Drawing.Point(3, 49);
+            this.Button_Eng.Name = "Button_Eng";
+            this.Button_Eng.Size = new System.Drawing.Size(75, 41);
+            this.Button_Eng.TabIndex = 62;
+            this.Button_Eng.Text = "Eng";
+            this.Button_Eng.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(2, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 37);
+            this.button2.TabIndex = 66;
+            this.button2.Text = "Интерфейс";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
@@ -197,6 +260,7 @@ namespace WindowsFormsApp2
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(954, 480);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -215,6 +279,8 @@ namespace WindowsFormsApp2
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolvo)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +299,11 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button Button_Ru;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Button_Eng;
+        private System.Windows.Forms.Button button2;
     }
 }
 

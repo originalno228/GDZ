@@ -62,12 +62,15 @@ namespace WindowsFormsApp2
             label5.Text = Words["Категория"];
             Button_Ru.Text = Words["Рус"];
             Button_Eng.Text = Words["Англ"];
+            Button_Eng.Text = Words["Англ"];
+            button1.Text = Words["Войти"];
 
+            /*
             categorys.Items[0] = Words["Фрукты"];
             categorys.Items[1] = Words["Овощи"];
             categorys.Items[2] = Words["Фастфуд"];
             categorys.Items[3] = Words["Соки"];
-            
+            */
 
         }
 
@@ -85,6 +88,7 @@ namespace WindowsFormsApp2
         
         public Продукты()
         {
+
             Ru_word.Add("Продукты", "Продукты");
             Ru_word.Add("Бюджет", "Бюджет");
             Ru_word.Add("Применить", "Применить");
@@ -98,6 +102,7 @@ namespace WindowsFormsApp2
             Ru_word.Add("Англ", "Англ");
             Ru_word.Add("Общая цена", "Общая цена");
             Ru_word.Add("Оплатить и выйти", "Оплатить и выйти");
+            Ru_word.Add("Войти", "Войти");
 
             Eng_word.Add("Продукты", "Products");
             Eng_word.Add("Бюджет", "Money");
@@ -110,12 +115,21 @@ namespace WindowsFormsApp2
             Eng_word.Add("Соки", "Sucks?");
             Eng_word.Add("Рус", "Ru");
             Eng_word.Add("Англ", "Eng");
-            Eng_word.Add("Общая цена", "Obchaya cena");
-            Eng_word.Add("Оплатить и выйти", "Save and exit");
+            Eng_word.Add("Общая цена", "total price");
+            Eng_word.Add("Оплатить и выйти", "Pay and exit");
+            Eng_word.Add("Войти", "sign in");
 
 
             InitializeComponent();
             loginLabel.Text = akkaunt + "2";
+
+
+            Language = Properties.Settings.Default.Language;
+            if (Language == "Английский")
+                translate(Продукты.Eng_word);
+            if (Language == "Русский")
+                translate(Продукты.Ru_word);
+
             // this.WindowState = FormWindowState.Maximized;
             //this.Width = Screen.PrimaryScreen.WorkingArea.Width;
             //this.Height = Screen.PrimaryScreen.WorkingArea.Height;
@@ -316,6 +330,25 @@ namespace WindowsFormsApp2
         private void categorys_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Продукты_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.Language = Language;
+            Properties.Settings.Default.Save();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                BackColor = colorDialog1.Color;
+            }
         }
     }
 }

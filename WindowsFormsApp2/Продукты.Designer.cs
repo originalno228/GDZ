@@ -45,7 +45,11 @@ namespace WindowsFormsApp2
             this.loginLabel = new System.Windows.Forms.Label();
             this.Button_Eng = new System.Windows.Forms.Button();
             this.Button_Ru = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -120,11 +124,12 @@ namespace WindowsFormsApp2
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(816, 9);
+            this.label1.Location = new System.Drawing.Point(-6, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 29);
             this.label1.TabIndex = 52;
             this.label1.Text = "тут время лол";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -171,10 +176,11 @@ namespace WindowsFormsApp2
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(486, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(494, -4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
@@ -187,7 +193,7 @@ namespace WindowsFormsApp2
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 74);
             this.button1.TabIndex = 58;
-            this.button1.Text = "Войти в аккаунт";
+            this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -203,7 +209,7 @@ namespace WindowsFormsApp2
             // 
             // Button_Eng
             // 
-            this.Button_Eng.Location = new System.Drawing.Point(656, 41);
+            this.Button_Eng.Location = new System.Drawing.Point(4, 46);
             this.Button_Eng.Name = "Button_Eng";
             this.Button_Eng.Size = new System.Drawing.Size(75, 41);
             this.Button_Eng.TabIndex = 62;
@@ -213,28 +219,55 @@ namespace WindowsFormsApp2
             // 
             // Button_Ru
             // 
-            this.Button_Ru.Location = new System.Drawing.Point(746, 42);
+            this.Button_Ru.Location = new System.Drawing.Point(85, 46);
             this.Button_Ru.Name = "Button_Ru";
-            this.Button_Ru.Size = new System.Drawing.Size(75, 39);
+            this.Button_Ru.Size = new System.Drawing.Size(75, 41);
             this.Button_Ru.TabIndex = 63;
             this.Button_Ru.Text = "Ru";
             this.Button_Ru.UseVisualStyleBackColor = true;
             this.Button_Ru.Click += new System.EventHandler(this.Button_Ru_Click_1);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.Button_Ru);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.Button_Eng);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel2.Location = new System.Drawing.Point(844, 420);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(175, 121);
+            this.panel2.TabIndex = 64;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Location = new System.Drawing.Point(3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(168, 37);
+            this.button3.TabIndex = 65;
+            this.button3.Text = "Интерфейс";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Продукты
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 546);
-            this.Controls.Add(this.Button_Ru);
-            this.Controls.Add(this.Button_Eng);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.categorys);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.price);
             this.Controls.Add(this.label6);
@@ -245,8 +278,11 @@ namespace WindowsFormsApp2
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Продукты";
             this.Text = "Семерочка";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Продукты_FormClosing);
             this.Resize += new System.EventHandler(this.button2_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +305,8 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label loginLabel;
         private System.Windows.Forms.Button Button_Eng;
         private System.Windows.Forms.Button Button_Ru;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button button3;
     }
 }
