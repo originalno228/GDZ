@@ -29,28 +29,18 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.Button_Ru = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Button_Eng = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(788, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(8, 8);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -100,9 +90,7 @@ namespace WindowsFormsApp2
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Aquamarine;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -115,6 +103,17 @@ namespace WindowsFormsApp2
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(169, 128);
             this.panel2.TabIndex = 65;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Location = new System.Drawing.Point(3, 10);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(161, 37);
+            this.button3.TabIndex = 66;
+            this.button3.Text = "Интерфейс";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Button_Ru
             // 
@@ -147,17 +146,6 @@ namespace WindowsFormsApp2
             this.Button_Eng.UseVisualStyleBackColor = true;
             this.Button_Eng.Click += new System.EventHandler(this.Button_Eng_Click);
             // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(3, 10);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 37);
-            this.button3.TabIndex = 66;
-            this.button3.Text = "Интерфейс";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Korzina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -168,7 +156,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Korzina";
@@ -182,8 +169,6 @@ namespace WindowsFormsApp2
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

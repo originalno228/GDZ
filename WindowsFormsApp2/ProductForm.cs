@@ -16,6 +16,9 @@ namespace WindowsFormsApp2
         string predmet;
         Food vybrannaja_eda;
         //Uchebnik[] uchebniks = new Uchebnik[3];  
+
+        //время        label7.Text = DateTime.Now.ToString("");
+
     
 
         private static Point MouseDownLocation;//движения pictureBox1 за мышкой
@@ -36,12 +39,22 @@ namespace WindowsFormsApp2
         }
         void translate(Dictionary<string, string> Words)
         {
-            label6.Text = Words["Успешно отправлено"];
-            label6.Text = Words["Описание"] + ":";
-            button1.Text = Words["Темная тема"];
-            button3.Text = Words["Добавить в корзину"];
-            
-            //label6.Text = Words["Бюджет"];
+            try
+            {
+                label6.Text = Words["Успешно отправлено"];
+                label6.Text = Words["Описание"] + ":";
+                button1.Text = Words["Темная тема"];
+                button3.Text = Words["Добавить в корзину"];
+                button2.Text = Words["Интерфейс"];
+                Button_Ru.Text = Words["Рус"];
+                Button_Eng.Text = Words["Англ"];
+
+                label6.Text = Words["Бюджет"];
+            }
+            catch (Exception e) 
+            {
+                string s = e.Message;
+            }
         }
 
         Food food;
@@ -49,6 +62,7 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
 
+            label7.Text = DateTime.Now.ToString("");
 
             if (Продукты.Language == "Английский")
                 translate(Продукты.Eng_word);
@@ -155,6 +169,16 @@ namespace WindowsFormsApp2
             {
                 BackColor = colorDialog1.Color;
             }
+        }
+
+        private void Button_Ru_Click(object sender, EventArgs e)
+        {
+            translate(Продукты.Ru_word);
+        }
+
+        private void Button_Eng_Click(object sender, EventArgs e)
+        {
+            translate(Продукты.Eng_word);
         }
     }
 }

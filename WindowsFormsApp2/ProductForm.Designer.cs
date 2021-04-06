@@ -43,10 +43,10 @@ namespace WindowsFormsApp2
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.Button_Ru = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Button_Eng = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolvo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -198,9 +198,7 @@ namespace WindowsFormsApp2
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Aquamarine;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -214,6 +212,17 @@ namespace WindowsFormsApp2
             this.panel2.Size = new System.Drawing.Size(175, 122);
             this.panel2.TabIndex = 65;
             // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(2, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 37);
+            this.button2.TabIndex = 66;
+            this.button2.Text = "Интерфейс";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // Button_Ru
             // 
             this.Button_Ru.Location = new System.Drawing.Point(83, 49);
@@ -222,6 +231,7 @@ namespace WindowsFormsApp2
             this.Button_Ru.TabIndex = 63;
             this.Button_Ru.Text = "Ru";
             this.Button_Ru.UseVisualStyleBackColor = true;
+            this.Button_Ru.Click += new System.EventHandler(this.Button_Ru_Click);
             // 
             // label7
             // 
@@ -241,17 +251,7 @@ namespace WindowsFormsApp2
             this.Button_Eng.TabIndex = 62;
             this.Button_Eng.Text = "Eng";
             this.Button_Eng.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(2, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 37);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "Интерфейс";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.Button_Eng.Click += new System.EventHandler(this.Button_Eng_Click);
             // 
             // ProductForm
             // 

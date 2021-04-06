@@ -1,0 +1,20 @@
+Продукты; Products
+Бюджет; Money
+Применить; Enter
+Проект запущен; Project start
+Категория; Category
+Фрукты; Fruits
+Овощи; хзз
+Фастфуд; Fastfood
+Соки; Sucks?
+Рус; Ru
+Англ; Eng
+Общая цена; total price
+Оплатить и выйти; Pay and exit
+Войти; sign in
+Интерфейс; Interface
+Успешно отправлено; Sent successfully
+Описание; Description
+Темная тема; Dark Theme
+Добавить в корзину; Add to Cart
+Семерочка; Semerochka
