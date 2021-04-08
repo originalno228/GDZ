@@ -88,8 +88,9 @@ namespace WindowsFormsApp2
         public Продукты()
         {
             InitializeComponent();
-            loginLabel.Text = akkaunt + "2";
+            loginLabel.Text = akkaunt + "";
 
+           
             // this.WindowState = FormWindowState.Maximized;
             //this.Width = Screen.PrimaryScreen.WorkingArea.Width;
             //this.Height = Screen.PrimaryScreen.WorkingArea.Height;
@@ -103,10 +104,13 @@ namespace WindowsFormsApp2
             foreach (string line in lines)
             {
                 string[] parts = line.Split(new string[] { ", " }, StringSplitOptions.None);
-                eda.Add(new Food(parts[0], Convert.ToInt32(parts[1]), parts[2]));
-                                
-                if (!categorys.Items.Contains(parts[2]))
-                    categorys.Items.Add(parts[2]);
+                if (parts.Length > 2)//больше двух элементов в блокноте том...
+                {
+                    eda.Add(new Food(parts[0], Convert.ToInt32(parts[1]), parts[2]));
+
+                    if (!categorys.Items.Contains(parts[2]))
+                        categorys.Items.Add(parts[2]);
+                }
             }
 
             #region Переводчик слов из текстового файла
@@ -200,6 +204,12 @@ namespace WindowsFormsApp2
         //сортировка по цене и названию
         private void button2_Click(object sender, EventArgs e)
         {
+
+            if (akkaunt == "Админ")//видимость кнопки "Добавить"
+            {
+                button4.Visible = true;
+            }
+
             int x = 10;
             int y = 10;
             for (int i = 0; i < eda.Count; i++)
@@ -318,6 +328,12 @@ namespace WindowsFormsApp2
             {
                 BackColor = colorDialog1.Color;
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddProducts newForm = new AddProducts();
+            newForm.Show();
         }
     }
 }

@@ -61,3 +61,4 @@ C:\Users\user\Downloads\GDZ-main (8)\GDZ-main\WindowsFormsApp2\obj\Debug\Сем�
 C:\Users\user\Downloads\GDZ-main (8)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\user\Downloads\GDZ-main (8)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\user\Desktop\ауйэ\GDZ\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Korzina.resources
+C:\Users\beavi\Desktop\Новая папка\GDZ Миша\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddProducts.resources

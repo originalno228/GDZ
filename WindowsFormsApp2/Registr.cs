@@ -34,6 +34,7 @@ namespace WindowsFormsApp2
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Продукты.akkaunt = textBox1.Text;
             if (textBox1.Text != "" || textBox2.Text != "")
             {
                 Program.LOGIN = "aue";
@@ -43,7 +44,7 @@ namespace WindowsFormsApp2
             else
                 MessageBox.Show("Введите хоть что-то ну епт");
 
-            if (textBox1.Text == "1" && textBox2.Text == "1");
+            if (textBox1.Text == "1" && textBox2.Text == "1")
             {
                 //Продукты newForm = new Продукты();
                 //newForm.Show();
