@@ -205,6 +205,18 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
 
+
+                Random rnd = new Random();
+                string[] yes = { "Rufus", "Bear", "Dakota", "Fido",
+                          "Vanya", "Samuel", "Koani", "Volodya",
+                          "Prince", "Yiska" };
+
+            int nomer = rnd.Next() % yes.Length;
+            button2.Text = yes[nomer];
+
+
+
+
             if (akkaunt == "Админ")//видимость кнопки "Добавить"
             {
                 button4.Visible = true;
@@ -287,6 +299,8 @@ namespace WindowsFormsApp2
             newForm.Show();
         }
 
+       
+
         private void button1_Click(object sender, EventArgs e)
         {
             Registr newForm = new Registr();
@@ -297,7 +311,6 @@ namespace WindowsFormsApp2
         private void categorys_ItemCheck(object sender, ItemCheckEventArgs e)
         {
         }
-
 
        
         private void poisk_KeyDown(object sender, KeyEventArgs e)

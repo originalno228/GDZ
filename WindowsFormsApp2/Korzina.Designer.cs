@@ -29,6 +29,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Korzina));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +40,10 @@ namespace WindowsFormsApp2
             this.label3 = new System.Windows.Forms.Label();
             this.Button_Eng = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.minus = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minus)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,6 +54,7 @@ namespace WindowsFormsApp2
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.minus);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(12, 9);
             this.panel1.Name = "panel1";
@@ -146,6 +151,16 @@ namespace WindowsFormsApp2
             this.Button_Eng.UseVisualStyleBackColor = true;
             this.Button_Eng.Click += new System.EventHandler(this.Button_Eng_Click);
             // 
+            // minus
+            // 
+            this.minus.Image = ((System.Drawing.Image)(resources.GetObject("minus.Image")));
+            this.minus.Location = new System.Drawing.Point(209, 123);
+            this.minus.Name = "minus";
+            this.minus.Size = new System.Drawing.Size(100, 50);
+            this.minus.TabIndex = 0;
+            this.minus.TabStop = false;
+            this.minus.Click += new System.EventHandler(this.minus_Click);
+            // 
             // Korzina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -161,8 +176,10 @@ namespace WindowsFormsApp2
             this.Name = "Korzina";
             this.Text = "Korzina";
             this.Load += new System.EventHandler(this.Korzina_Load);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +196,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button Button_Eng;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.PictureBox minus;
     }
 }

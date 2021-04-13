@@ -76,7 +76,7 @@ namespace WindowsFormsApp2
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
 
-                PictureBox minus = new PictureBox();
+                //PictureBox minus = new PictureBox();
                 minus.Location = new Point(x + 120, y + 150);
                 minus.Size = new Size(30, 30);
                 minus.SizeMode = PictureBoxSizeMode.Zoom;
@@ -84,9 +84,13 @@ namespace WindowsFormsApp2
                 minus.Load("../../../pictures/минус.png");
 
 
+
+
+
                 // picture.Click += new EventHandler(Продукты.pictureBox1_Click);
 
-                panel1.Controls.Add(minus);
+    
+                panel1.Controls.Add(minus);//пацаны добавляются
                 panel1.Controls.Add(picture);
                 panel1.Controls.Add(lablecount);
                 prices += eda.price * count; //подсчет итоговой цены
@@ -135,6 +139,14 @@ namespace WindowsFormsApp2
             {
                 BackColor = colorDialog1.Color;
             }
+        }
+
+        private void minus_Click(object sender, EventArgs e)
+        {
+            // count -= 1;
+            //Продукты.korz228[vybrannaja_eda] - 1;
+            this.Close();
+
         }
     }
 }

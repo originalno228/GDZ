@@ -142,7 +142,7 @@ namespace WindowsFormsApp2
             "Овощи",
             "Фастфуд",
             "Соки"});
-            this.categorys.Location = new System.Drawing.Point(856, 109);
+            this.categorys.Location = new System.Drawing.Point(849, 127);
             this.categorys.Name = "categorys";
             this.categorys.Size = new System.Drawing.Size(149, 178);
             this.categorys.TabIndex = 55;
@@ -155,7 +155,7 @@ namespace WindowsFormsApp2
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.No;
-            this.label5.Location = new System.Drawing.Point(851, 77);
+            this.label5.Location = new System.Drawing.Point(844, 95);
             this.label5.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 29);
@@ -166,7 +166,7 @@ namespace WindowsFormsApp2
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(854, 291);
+            this.button1.Location = new System.Drawing.Point(849, 311);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 74);
             this.button1.TabIndex = 58;
@@ -235,11 +235,10 @@ namespace WindowsFormsApp2
             // 
             this.button4.Location = new System.Drawing.Point(663, 9);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 63);
+            this.button4.Size = new System.Drawing.Size(243, 73);
             this.button4.TabIndex = 65;
-            this.button4.Text = "Добавить";
+            this.button4.Text = "Добавить товар";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
