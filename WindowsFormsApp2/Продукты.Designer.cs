@@ -29,6 +29,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Продукты));
             this.button2 = new System.Windows.Forms.Button();
             this.Poisk = new System.Windows.Forms.TextBox();
@@ -48,6 +49,8 @@ namespace WindowsFormsApp2
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button5 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -126,9 +129,9 @@ namespace WindowsFormsApp2
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(-6, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 29);
+            this.label1.Size = new System.Drawing.Size(95, 29);
             this.label1.TabIndex = 52;
-            this.label1.Text = "тут время лол";
+            this.label1.Text = "Время:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // categorys
@@ -186,9 +189,9 @@ namespace WindowsFormsApp2
             // 
             // Button_Eng
             // 
-            this.Button_Eng.Location = new System.Drawing.Point(4, 46);
+            this.Button_Eng.Location = new System.Drawing.Point(3, 47);
             this.Button_Eng.Name = "Button_Eng";
-            this.Button_Eng.Size = new System.Drawing.Size(75, 41);
+            this.Button_Eng.Size = new System.Drawing.Size(81, 40);
             this.Button_Eng.TabIndex = 62;
             this.Button_Eng.Text = "Eng";
             this.Button_Eng.UseVisualStyleBackColor = true;
@@ -196,9 +199,9 @@ namespace WindowsFormsApp2
             // 
             // Button_Ru
             // 
-            this.Button_Ru.Location = new System.Drawing.Point(85, 46);
+            this.Button_Ru.Location = new System.Drawing.Point(89, 46);
             this.Button_Ru.Name = "Button_Ru";
-            this.Button_Ru.Size = new System.Drawing.Size(75, 41);
+            this.Button_Ru.Size = new System.Drawing.Size(81, 41);
             this.Button_Ru.TabIndex = 63;
             this.Button_Ru.Text = "Ru";
             this.Button_Ru.UseVisualStyleBackColor = true;
@@ -208,8 +211,9 @@ namespace WindowsFormsApp2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel2.BackColor = System.Drawing.Color.GhostWhite;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.Button_Ru);
             this.panel2.Controls.Add(this.label1);
@@ -225,9 +229,9 @@ namespace WindowsFormsApp2
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 37);
+            this.button3.Size = new System.Drawing.Size(81, 37);
             this.button3.TabIndex = 65;
-            this.button3.Text = "Интерфейс";
+            this.button3.Text = "фон1";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -252,6 +256,22 @@ namespace WindowsFormsApp2
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Location = new System.Drawing.Point(89, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(81, 37);
+            this.button5.TabIndex = 66;
+            this.button5.Text = "фон2";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Продукты
             // 
@@ -305,5 +325,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button5;
     }
 }

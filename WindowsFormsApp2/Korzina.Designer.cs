@@ -31,6 +31,7 @@ namespace WindowsFormsApp2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Korzina));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.minus = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -40,10 +41,9 @@ namespace WindowsFormsApp2
             this.label3 = new System.Windows.Forms.Label();
             this.Button_Eng = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.minus = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minus)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,6 +60,16 @@ namespace WindowsFormsApp2
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(836, 529);
             this.panel1.TabIndex = 52;
+            // 
+            // minus
+            // 
+            this.minus.Image = ((System.Drawing.Image)(resources.GetObject("minus.Image")));
+            this.minus.Location = new System.Drawing.Point(217, 152);
+            this.minus.Name = "minus";
+            this.minus.Size = new System.Drawing.Size(100, 50);
+            this.minus.TabIndex = 0;
+            this.minus.TabStop = false;
+            this.minus.Click += new System.EventHandler(this.minus_Click);
             // 
             // label1
             // 
@@ -151,16 +161,6 @@ namespace WindowsFormsApp2
             this.Button_Eng.UseVisualStyleBackColor = true;
             this.Button_Eng.Click += new System.EventHandler(this.Button_Eng_Click);
             // 
-            // minus
-            // 
-            this.minus.Image = ((System.Drawing.Image)(resources.GetObject("minus.Image")));
-            this.minus.Location = new System.Drawing.Point(209, 123);
-            this.minus.Name = "minus";
-            this.minus.Size = new System.Drawing.Size(100, 50);
-            this.minus.TabIndex = 0;
-            this.minus.TabStop = false;
-            this.minus.Click += new System.EventHandler(this.minus_Click);
-            // 
             // Korzina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -177,9 +177,9 @@ namespace WindowsFormsApp2
             this.Text = "Korzina";
             this.Load += new System.EventHandler(this.Korzina_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.minus)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.minus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

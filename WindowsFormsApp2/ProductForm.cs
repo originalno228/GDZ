@@ -62,6 +62,9 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
 
+            //Font = new Font("Microsoft Sans Serif", 20);
+            Font = new Font("Microsoft Sans Serif", Convert.ToInt32(kolvo.Text));
+
             label7.Text = DateTime.Now.ToString("");
 
             if (Продукты.Language == "Английский")
@@ -126,10 +129,12 @@ namespace WindowsFormsApp2
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
+            
             label5.Text = (vybrannaja_eda.price * kolvo.Value).ToString();
+            Font = new Font("Microsoft Sans Serif", Convert.ToInt32(kolvo.Text));
         }
 
-
+        
         private void pictureBox2_Click_2(object sender, EventArgs e)
         {
             Продукты.aue.Add(vybrannaja_eda);

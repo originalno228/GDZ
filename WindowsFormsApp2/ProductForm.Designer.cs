@@ -128,7 +128,7 @@ namespace WindowsFormsApp2
             this.kolvo.Size = new System.Drawing.Size(79, 36);
             this.kolvo.TabIndex = 30;
             this.kolvo.Value = new decimal(new int[] {
-            1,
+            14,
             0,
             0,
             0});

@@ -64,6 +64,9 @@ namespace WindowsFormsApp2
             button3.Text = Words["Интерфейс"];
             button1.Text = Words["Войти"];
             Text = Words["Семерочка"];
+
+
+           
             /*
             categorys.Items[0] = Words["Фрукты"];
             categorys.Items[1] = Words["Овощи"];
@@ -137,7 +140,7 @@ namespace WindowsFormsApp2
             #endregion
 
             //время
-            label1.Text = DateTime.Now.ToString("");
+          //  label1.Text = DateTime.Now.ToString("");
 
             int x = 10;
             int y = 10;
@@ -299,13 +302,31 @@ namespace WindowsFormsApp2
             newForm.Show();
         }
 
-       
+       int Time1 = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
             Registr newForm = new Registr();
-            newForm.ShowDialog();
+           // newForm.ShowDialog();
             loginLabel.Text = akkaunt;
+            button4.Visible = true;
+            Time1 = Environment.TickCount;
+            
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            label1.Text = DateTime.Now.ToLongTimeString();            
+              int  Time228 = Environment.TickCount;
+            if (Time228 - Time1 > 2000)
+             {
+             button4.Visible = false;
+
+             }
+
+
         }
 
         private void categorys_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -347,6 +368,16 @@ namespace WindowsFormsApp2
         {
             AddProducts newForm = new AddProducts();
             newForm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+                if (colorDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    panel1.BackColor = colorDialog1.Color;
+                }
+            
         }
     }
 }
