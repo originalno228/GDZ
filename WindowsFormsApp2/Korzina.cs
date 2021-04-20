@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
+    
     public partial class Korzina : Form
     {
+
 
         void translate(Dictionary<string, string> Words)
         {
@@ -19,7 +21,7 @@ namespace WindowsFormsApp2
             button2.Text = Words["Оплатить и выйти"];
             Button_Ru.Text = Words["Рус"];
             Button_Eng.Text = Words["Англ"];
-            button3.Text = Words["Интерфейс"];
+            //button3.Text = Words["Интерфейс"];
             //label6.Text = Words["Бюджет"];
         }
         public Korzina()
@@ -44,62 +46,18 @@ namespace WindowsFormsApp2
                 Food eda = eda1.Key;
                 int count = eda1.Value;
 
-                
 
-                PictureBox picture = new PictureBox();
+
+                UserControl1 picture = new UserControl1(eda, count);
                 picture.Location = new Point(x, y);
-                picture.SizeMode = PictureBoxSizeMode.Zoom;
-                picture.Tag = eda.name;
-
-               
-
-                Label lablecount = new Label();
-                lablecount.Location = new Point(x, y + 160);
-                lablecount.Size = new Size(100, 30);
-                lablecount.Text = eda.name + " (" + count.ToString() + ")";
-                lablecount.Font = new Font("Tahoma", 9, FontStyle.Bold);
-                //MessageBox.Show(eda.name + " (" + count.ToString() + ")");
-
-                picture.Size = new Size(150, 150);
-
-                
-                try//попытка загрузить картинку либо jpj либо png либо до связи
-                {
-                    picture.Load("../../../Продукты/" + eda.name + ".jpg");
-                }
-                catch (Exception)
-                {
-                    try
-                    {
-                        picture.Load("../../../Продукты/" + eda.name + ".png");
-                    }
-                    catch (Exception ex) { MessageBox.Show(ex.Message); }
-                }
-
-                //PictureBox minus = new PictureBox();
-                minus.Location = new Point(x + 120, y + 150);
-                minus.Size = new Size(30, 30);
-                minus.SizeMode = PictureBoxSizeMode.Zoom;
-                minus.Tag = eda.name;
-                minus.Load("../../../pictures/минус.png");
-
-
-
-
-
-                // picture.Click += new EventHandler(Продукты.pictureBox1_Click);
-
-    
-                panel1.Controls.Add(minus);//пацаны добавляются
                 panel1.Controls.Add(picture);
-                panel1.Controls.Add(lablecount);
                 prices += eda.price * count; //подсчет итоговой цены
                 
 
-                x = x + 160;
-                if (x + 120 > Width)
+                x = x + 250;
+                if (x + 450 > Width)
                 {
-                    y = y + 180;
+                    y = y + 250;
                     x = 10;
                 }
             }
@@ -147,6 +105,36 @@ namespace WindowsFormsApp2
             //Продукты.korz228[vybrannaja_eda] - 1;
             this.Close();
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                panel1.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены", "Вы уверены", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Продукты.korz228.Clear();
+                panel1.Controls.Clear();
+            }
         }
     }
 }

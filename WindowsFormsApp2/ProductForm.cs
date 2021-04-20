@@ -43,7 +43,7 @@ namespace WindowsFormsApp2
             {
                 label6.Text = Words["Успешно отправлено"];
                 label6.Text = Words["Описание"] + ":";
-                button1.Text = Words["Темная тема"];
+                //button1.Text = Words["Темная тема"];
                 button3.Text = Words["Добавить в корзину"];
                 button2.Text = Words["Интерфейс"];
                 Button_Ru.Text = Words["Рус"];
@@ -150,6 +150,8 @@ namespace WindowsFormsApp2
             //newForm.Show();
         }
 
+        int Time1 = 0;
+
         private void button3_Click_1(object sender, EventArgs e)
         { 
 
@@ -160,7 +162,24 @@ namespace WindowsFormsApp2
             else
                 Продукты.korz228[vybrannaja_eda] = Продукты.korz228[vybrannaja_eda] + 1;
 
+
+
+            // newForm.ShowDialog();
+
             label1.Visible = true;
+            Time1 = Environment.TickCount;
+            //label1.Visible = true;
+        }
+
+         private void timer1_Tick(object sender, EventArgs e)
+        {
+            //label1.Text = DateTime.Now.ToLongTimeString();
+            int Time228 = Environment.TickCount;
+            if (Time228 - Time1 > 1200)
+            {
+                label1.Visible = false;
+
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -184,6 +203,16 @@ namespace WindowsFormsApp2
         private void Button_Eng_Click(object sender, EventArgs e)
         {
             translate(Продукты.Eng_word);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

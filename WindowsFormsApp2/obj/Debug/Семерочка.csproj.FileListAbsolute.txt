@@ -76,3 +76,4 @@ C:\Users\user\Desktop\GDZ-main (4)\GDZ-main\WindowsFormsApp2\obj\Debug\Семе�
 C:\Users\user\Desktop\GDZ-main (4)\GDZ-main\WindowsFormsApp2\obj\Debug\Семерочка.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\GDZ-main (4)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\user\Desktop\GDZ-main (4)\GDZ-main\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\beavi\Desktop\Новая папка\GDZ Миша\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UserControl1.resources

@@ -283,7 +283,7 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        public static void pictureBox1_Click(object sender, EventArgs e)
         {
             PictureBox pb = (PictureBox)sender;
             ProductForm newForm = new ProductForm(pb.Tag.ToString());

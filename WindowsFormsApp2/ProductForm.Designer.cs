@@ -29,8 +29,8 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
-            this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,27 +43,15 @@ namespace WindowsFormsApp2
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.Button_Ru = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Button_Eng = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolvo)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(26, 382);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 91);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Темная тема";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -101,6 +89,7 @@ namespace WindowsFormsApp2
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
@@ -175,8 +164,8 @@ namespace WindowsFormsApp2
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.Salmon;
-            this.label1.Location = new System.Drawing.Point(21, 181);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(0, 354);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 29);
             this.label1.TabIndex = 39;
@@ -187,7 +176,7 @@ namespace WindowsFormsApp2
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(42, 224);
+            this.button3.Location = new System.Drawing.Point(26, 389);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(195, 79);
             this.button3.TabIndex = 41;
@@ -211,17 +200,6 @@ namespace WindowsFormsApp2
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(175, 122);
             this.panel2.TabIndex = 65;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(2, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 37);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "Интерфейс";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Button_Ru
             // 
@@ -253,6 +231,22 @@ namespace WindowsFormsApp2
             this.Button_Eng.UseVisualStyleBackColor = true;
             this.Button_Eng.Click += new System.EventHandler(this.Button_Eng_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(2, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 37);
+            this.button2.TabIndex = 66;
+            this.button2.Text = "Интерфейс";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
@@ -269,7 +263,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -288,7 +281,6 @@ namespace WindowsFormsApp2
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
@@ -303,6 +295,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button Button_Ru;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Button_Eng;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button2;
     }
 }
