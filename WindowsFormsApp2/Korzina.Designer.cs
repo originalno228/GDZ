@@ -29,6 +29,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@ namespace WindowsFormsApp2
             this.Button_Ru = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,9 +130,9 @@ namespace WindowsFormsApp2
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(2, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 29);
+            this.label3.Size = new System.Drawing.Size(133, 29);
             this.label3.TabIndex = 52;
-            this.label3.Text = "тут время лол";
+            this.label3.Text = "тут время ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Button_Ru
@@ -171,6 +173,11 @@ namespace WindowsFormsApp2
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Korzina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -207,5 +214,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button Button_Ru;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

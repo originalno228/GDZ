@@ -29,37 +29,43 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registr));
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Cursor = System.Windows.Forms.Cursors.No;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(184, 109);
             this.label6.Margin = new System.Windows.Forms.Padding(18, 0, 18, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(698, 39);
+            this.label6.Size = new System.Drawing.Size(700, 41);
             this.label6.TabIndex = 26;
             this.label6.Text = "Зарегестрируйтесь или войдите в аккаунт!";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Cursor = System.Windows.Forms.Cursors.No;
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(14, 483);
             this.label1.Margin = new System.Windows.Forms.Padding(18, 0, 18, 0);
@@ -68,8 +74,6 @@ namespace WindowsFormsApp2
             this.label1.TabIndex = 30;
             this.label1.Text = "Сообщить об ошибке";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Visible = false;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox2
             // 
@@ -80,6 +84,7 @@ namespace WindowsFormsApp2
             this.textBox2.Size = new System.Drawing.Size(366, 34);
             this.textBox2.TabIndex = 29;
             this.textBox2.Text = "Пароль";
+            this.textBox2.UseWaitCursor = true;
             // 
             // textBox1
             // 
@@ -89,7 +94,6 @@ namespace WindowsFormsApp2
             this.textBox1.Size = new System.Drawing.Size(366, 34);
             this.textBox1.TabIndex = 28;
             this.textBox1.Text = "Логин";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // checkBox1
             // 
@@ -103,20 +107,6 @@ namespace WindowsFormsApp2
             this.checkBox1.TabIndex = 27;
             this.checkBox1.Text = "Вы не робот?";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(497, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(18, 0, 18, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 39);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "да";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button4
             // 
@@ -131,6 +121,18 @@ namespace WindowsFormsApp2
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(552, 360);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 86);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Регистрация";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -143,28 +145,47 @@ namespace WindowsFormsApp2
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // pictureBox2
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(552, 360);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 86);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Регистрация";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::WindowsFormsApp2.Properties.Resources.глаз;
+            this.pictureBox2.Location = new System.Drawing.Point(728, 247);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 39;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.No;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(898, 503);
+            this.label2.Margin = new System.Windows.Forms.Padding(18, 0, 18, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 39);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "time";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Registr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 540);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -173,8 +194,9 @@ namespace WindowsFormsApp2
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Registr";
-            this.Text = "Registr";
+            this.Text = "Регистрация";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,9 +209,11 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
     }
 }

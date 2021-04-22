@@ -12,61 +12,72 @@ namespace WindowsFormsApp2
 {
     public partial class Registr : Form
     {
+        public static string Login = "";
+        public static string Parol = "";
+
+        List<string> Users = new List<string>();
+
         public Registr()
         {
             InitializeComponent();
+            Users = new List<string>();
+            Users.Add("Админ"); Users.Add("Админ");
+            Users.Add("1"); Users.Add("1");
+           
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Продукты.akkaunt = textBox1.Text;
-            if (textBox1.Text != "" || textBox2.Text != "")
-            {
-                Program.LOGIN = "aue";
-                //Admin newForm = new Admin();
-                //newForm.Show();
-            }
-            else
-                MessageBox.Show("Введите хоть что-то ну епт");
-
-            if (textBox1.Text == "1" && textBox2.Text == "1")
-            {
-                //Продукты newForm = new Продукты();
-                //newForm.Show();
-                this.Close();
-                Продукты.akkaunt = "Админ";
-            }
-
-        }
+      
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://vk.com/mihmet");
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {   
+        private void button4_Click(object sender, EventArgs e)
+        {
+            /*
+            bool a = false;
 
+            for (int i = 0; i < Users.Count; i += 2)
+            {
+                if (textBox1.Text == Users[i])
+                {
+                    Login = textBox1.Text;
+                    Close();
+                    a = true;
+                }
+            }
+
+            if (!a)
+                MessageBox.Show("Офигел?!");
+            */
+
+            if (checkBox1.Checked == true)
+            { 
+            Login = textBox1.Text;
+            Parol = textBox2.Text;
+            Close();
+            }
+            else
+            {
+                checkBox1.ForeColor = Color.Red;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
+            if (textBox2.UseSystemPasswordChar == true)
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+            }
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

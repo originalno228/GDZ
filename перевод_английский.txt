@@ -18,3 +18,6 @@
 Темная тема; Dark Theme
 Добавить в корзину; Add to Cart
 Семерочка; Semerochka
+Количество; Count
+Итого к оплате; хз
+Цена; Price

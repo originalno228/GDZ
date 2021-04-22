@@ -33,7 +33,6 @@ namespace WindowsFormsApp2
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.kolvo = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,16 +40,17 @@ namespace WindowsFormsApp2
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.Button_Ru = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Button_Eng = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kolvo)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -58,7 +58,7 @@ namespace WindowsFormsApp2
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(19, 9);
+            this.label6.Location = new System.Drawing.Point(646, 9);
             this.label6.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(183, 39);
@@ -69,7 +69,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 64);
+            this.label2.Location = new System.Drawing.Point(657, 55);
             this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 29);
@@ -78,26 +78,11 @@ namespace WindowsFormsApp2
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(573, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(326, 305);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.Lime;
-            this.button4.Location = new System.Drawing.Point(573, 323);
+            this.button4.Location = new System.Drawing.Point(12, 351);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(181, 91);
             this.button4.TabIndex = 22;
@@ -107,7 +92,7 @@ namespace WindowsFormsApp2
             // 
             // kolvo
             // 
-            this.kolvo.Location = new System.Drawing.Point(283, 41);
+            this.kolvo.Location = new System.Drawing.Point(349, 48);
             this.kolvo.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -126,7 +111,7 @@ namespace WindowsFormsApp2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(278, 9);
+            this.label3.Location = new System.Drawing.Point(344, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 29);
@@ -141,7 +126,7 @@ namespace WindowsFormsApp2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(268, 92);
+            this.label4.Location = new System.Drawing.Point(344, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 29);
@@ -152,7 +137,7 @@ namespace WindowsFormsApp2
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(483, 92);
+            this.label5.Location = new System.Drawing.Point(535, 115);
             this.label5.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 29);
@@ -165,31 +150,18 @@ namespace WindowsFormsApp2
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(0, 354);
+            this.label1.Location = new System.Drawing.Point(344, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 29);
             this.label1.TabIndex = 39;
             this.label1.Text = "Успешно добавлено!";
             this.label1.Visible = false;
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(26, 389);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(195, 79);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Добавить\r\nв корзину";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.Button_Ru);
@@ -200,6 +172,17 @@ namespace WindowsFormsApp2
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(175, 122);
             this.panel2.TabIndex = 65;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(2, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 37);
+            this.button2.TabIndex = 66;
+            this.button2.Text = "Интерфейс";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Button_Ru
             // 
@@ -215,11 +198,11 @@ namespace WindowsFormsApp2
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-6, 91);
+            this.label7.Location = new System.Drawing.Point(-2, 90);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(177, 29);
+            this.label7.Size = new System.Drawing.Size(100, 29);
             this.label7.TabIndex = 52;
-            this.label7.Text = "тут время лол";
+            this.label7.Text = " время ";
             // 
             // Button_Eng
             // 
@@ -236,16 +219,33 @@ namespace WindowsFormsApp2
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button2
+            // button3
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(2, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 37);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "Интерфейс";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(349, 235);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(195, 79);
+            this.button3.TabIndex = 41;
+            this.button3.Text = "Добавить\r\nв корзину";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(326, 323);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // ProductForm
             // 
@@ -270,10 +270,10 @@ namespace WindowsFormsApp2
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "ProductForm";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolvo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

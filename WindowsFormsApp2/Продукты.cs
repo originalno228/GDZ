@@ -93,6 +93,8 @@ namespace WindowsFormsApp2
             InitializeComponent();
             loginLabel.Text = akkaunt + "";
 
+            
+
            
             // this.WindowState = FormWindowState.Maximized;
             //this.Width = Screen.PrimaryScreen.WorkingArea.Width;
@@ -121,6 +123,7 @@ namespace WindowsFormsApp2
             foreach (string line in lines)
             {
                 string[] parts = line.Split(new string[] { "; " }, StringSplitOptions.None);
+                if (parts.Length > 1)
                 Ru_word.Add(parts[0], parts[1]);
             }
 
@@ -307,12 +310,14 @@ namespace WindowsFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
             Registr newForm = new Registr();
-           // newForm.ShowDialog();
+            newForm.ShowDialog();
             loginLabel.Text = akkaunt;
             button4.Visible = true;
             Time1 = Environment.TickCount;
-            
 
+            button4.Visible = (Registr.Login == "Админ" && Registr.Parol == "123");
+
+            loginLabel.Text = Registr.Login;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -322,7 +327,7 @@ namespace WindowsFormsApp2
               int  Time228 = Environment.TickCount;
             if (Time228 - Time1 > 2000)
              {
-             button4.Visible = false;
+            // button4.Visible = false;
 
              }
 
@@ -378,6 +383,11 @@ namespace WindowsFormsApp2
                     panel1.BackColor = colorDialog1.Color;
                 }
             
+        }
+
+        private void Продукты_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,7 +41,7 @@ namespace WindowsFormsApp2
         {
             try
             {
-                label6.Text = Words["Успешно отправлено"];
+              
                 label6.Text = Words["Описание"] + ":";
                 //button1.Text = Words["Темная тема"];
                 button3.Text = Words["Добавить в корзину"];
@@ -49,7 +49,10 @@ namespace WindowsFormsApp2
                 Button_Ru.Text = Words["Рус"];
                 Button_Eng.Text = Words["Англ"];
 
-                label6.Text = Words["Бюджет"];
+          
+                label3.Text = Words["Количество"];
+                label4.Text = Words["Итого к оплате"];
+               // label6.Text = Words["Количество"];
             }
             catch (Exception e) 
             {
@@ -131,7 +134,7 @@ namespace WindowsFormsApp2
         {
             
             label5.Text = (vybrannaja_eda.price * kolvo.Value).ToString();
-            Font = new Font("Microsoft Sans Serif", Convert.ToInt32(kolvo.Text));
+           // Font = new Font("Microsoft Sans Serif", Convert.ToInt32(kolvo.Text));
         }
 
         
@@ -173,7 +176,7 @@ namespace WindowsFormsApp2
 
          private void timer1_Tick(object sender, EventArgs e)
         {
-            //label1.Text = DateTime.Now.ToLongTimeString();
+            label7.Text = DateTime.Now.ToLongTimeString();
             int Time228 = Environment.TickCount;
             if (Time228 - Time1 > 1200)
             {

@@ -34,9 +34,6 @@ namespace WindowsFormsApp2
             if (Продукты.Language == "Русский")
                 translate(Продукты.Ru_word);
 
-            //время
-            label3.Text = DateTime.Now.ToString("");
-
             int prices = 0;
             int x = 0;
             int y = 0;
@@ -134,7 +131,13 @@ namespace WindowsFormsApp2
             {
                 Продукты.korz228.Clear();
                 panel1.Controls.Clear();
+                label2.Text = 0.ToString();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label3.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

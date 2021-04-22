@@ -44,8 +44,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 347);
-            this.button1.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.button1.Location = new System.Drawing.Point(18, 297);
+            this.button1.Margin = new System.Windows.Forms.Padding(9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(260, 86);
             this.button1.TabIndex = 9;
@@ -61,7 +61,7 @@
             "Фрукты",
             "Ягоды"});
             this.comboBox1.Location = new System.Drawing.Point(233, 146);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(9);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(277, 37);
             this.comboBox1.TabIndex = 8;
@@ -79,7 +79,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(233, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(277, 34);
             this.textBox1.TabIndex = 6;
@@ -107,7 +107,7 @@
             // kolvo228
             // 
             this.kolvo228.Location = new System.Drawing.Point(233, 87);
-            this.kolvo228.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.kolvo228.Margin = new System.Windows.Forms.Padding(5);
             this.kolvo228.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -129,10 +129,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(536, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(535, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(448, 396);
+            this.pictureBox1.Size = new System.Drawing.Size(459, 353);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1021, 546);
+            this.ClientSize = new System.Drawing.Size(1021, 442);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kolvo228);
             this.Controls.Add(this.label3);
@@ -152,7 +152,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddProducts";
             this.Text = "AddProducts";
             ((System.ComponentModel.ISupportInitialize)(this.kolvo228)).EndInit();
