@@ -38,6 +38,7 @@ namespace WindowsFormsApp2
             int x = 0;
             int y = 0;
             //foreach (Food eda in Продукты.aue)
+
             foreach (KeyValuePair<Food, int> eda1 in Продукты.korz228)
             {
                 Food eda = eda1.Key;
@@ -48,9 +49,7 @@ namespace WindowsFormsApp2
                 UserControl1 picture = new UserControl1(eda, count);
                 picture.Location = new Point(x, y);
                 panel1.Controls.Add(picture);
-                prices += eda.price * count; //подсчет итоговой цены
                 
-
                 x = x + 250;
                 if (x + 450 > Width)
                 {
@@ -59,7 +58,31 @@ namespace WindowsFormsApp2
                 }
             }
 
-            label2.Text = prices.ToString();
+            //private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+            {
+
+                //label2.Text = ( eda.price * count).ToString();
+                // Font = new Font("Microsoft Sans Serif", Convert.ToInt32(kolvo.Text));
+            }
+
+            int Time1 = 0;
+            int Time228 = Environment.TickCount;
+            if (Time228 - Time1 > 20)
+            {
+                // button4.Visible = false;
+
+
+                foreach (KeyValuePair<Food, int> eda1 in Продукты.korz228)
+                {
+                    Food eda = eda1.Key;
+                    int count = eda1.Value;
+                    label2.Text = (eda.price * count).ToString(); //подсчет итоговой цены
+
+
+                }
+            }
+
+                label2.Text = prices.ToString();
 
         }
 

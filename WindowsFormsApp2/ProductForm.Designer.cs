@@ -82,7 +82,7 @@ namespace WindowsFormsApp2
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.Lime;
-            this.button4.Location = new System.Drawing.Point(12, 351);
+            this.button4.Location = new System.Drawing.Point(12, 377);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(181, 91);
             this.button4.TabIndex = 22;
@@ -144,6 +144,7 @@ namespace WindowsFormsApp2
             this.label5.TabIndex = 36;
             this.label5.Text = "1";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label1
             // 

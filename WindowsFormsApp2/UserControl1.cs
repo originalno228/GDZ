@@ -14,10 +14,12 @@ namespace WindowsFormsApp2
     public partial class UserControl1 : UserControl
     {
         Food eda;
+        int count;
         
-        public UserControl1(Food eda1, int count)
+        public UserControl1(Food eda1, int count1)
         {
             eda = eda1;
+            count = count1;
             InitializeComponent();
             label1.Text = eda.name;
             label2.Text = eda.price.ToString();
@@ -36,6 +38,15 @@ namespace WindowsFormsApp2
         {
             Продукты.korz228.Remove(eda);
             this.Parent = null;
+        }
+
+        private void kolvo_ValueChanged(object sender, EventArgs e)
+        {
+            if (count != kolvo.Value)
+            {
+                Продукты.korz228[eda] = Convert.ToInt32(kolvo.Value);
+                count = Convert.ToInt32(kolvo.Value);
+            }
         }
     }
 }
