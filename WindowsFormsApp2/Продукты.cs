@@ -45,7 +45,7 @@ namespace WindowsFormsApp2
         //создание словаря полезно
         public static Dictionary<Food, int> korz228 = new Dictionary<Food, int>();
       
-
+        
         public static string akkaunt = "";
 
         public static Dictionary<string, string> Eng_word = new Dictionary<string, string>();

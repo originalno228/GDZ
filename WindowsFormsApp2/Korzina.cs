@@ -44,8 +44,6 @@ namespace WindowsFormsApp2
                 Food eda = eda1.Key;
                 int count = eda1.Value;
 
-
-
                 UserControl1 picture = new UserControl1(eda, count);
                 picture.Location = new Point(x, y);
                 panel1.Controls.Add(picture);
