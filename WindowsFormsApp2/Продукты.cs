@@ -149,6 +149,8 @@ namespace WindowsFormsApp2
             int y = 10;
             for (int i = 0; i < eda.Count; i++)
             {
+
+
                 //--------------Картинка--------------------------------------
                 eda[i].picture.Location = new Point(x, y);
                 eda[i].picture.SizeMode = PictureBoxSizeMode.Zoom;

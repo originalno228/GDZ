@@ -91,22 +91,31 @@ namespace WindowsFormsApp2
             //mailMessage.Body = "В твоём проекте ошибка: " + textBox3.Text + ", а еще ты лох";
             //Environment.NewLine + ", а еще ты лох";
 
-            mailMessage.Body = "Ваша корзина ";
+            //mailMessage.Body = "Ваша корзина ";
             //Environment.NewLine + "";
+
+            File.WriteAllText("Корзина.csv", "Продукт,Количество,Цена");
             foreach (KeyValuePair<Food, int> eda1 in  Продукты.korz228)
             {
                 Food eda = eda1.Key;
 
-                mailMessage.Body += 
-                    Environment.NewLine + "Продукт - s" + eda.name + "Цена - " + eda.price.ToString() + "количество:";
+                mailMessage.Body = "Корзина";
+
+
+                File.AppendAllText("Корзина.csv",
+                     Environment.NewLine  +
+                     eda.name + "," +
+                     eda1.Value.ToString() + "," +
+                     eda.price.ToString());
             }
-            
+            mailMessage.Attachments.Add(new Attachment("Корзина.csv"));
 
 
-           
 
-            mailMessage.IsBodyHtml = true;
-           // mailMessage.Body = File.ReadAllText("Письмо.txt");
+
+
+            // mailMessage.IsBodyHtml = true;
+            // mailMessage.Body = File.ReadAllText("Письмо.txt");
 
             smtpClient.Host = "smtp.gmail.com";
             smtpClient.Port = 587;
