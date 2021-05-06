@@ -13,9 +13,7 @@ namespace WindowsFormsApp2
     
     public partial class Korzina : Form
     {
-
-
-        void translate(Dictionary<string, string> Words)
+        void Translate(Dictionary<string, string> Words)
         {
             label1.Text = Words["Общая цена"] + ":";
             button2.Text = Words["Оплатить и выйти"];
@@ -30,9 +28,9 @@ namespace WindowsFormsApp2
             InitializeComponent();
 
             if (Продукты.Language == "Английский")
-                translate(Продукты.Eng_word);
+                Translate(Продукты.Eng_word);
             if (Продукты.Language == "Русский")
-                translate(Продукты.Ru_word);
+                Translate(Продукты.Ru_word);
 
             int prices = 0;
             int x = 0;
@@ -96,12 +94,15 @@ namespace WindowsFormsApp2
 
         private void Button_Eng_Click(object sender, EventArgs e)
         {
-            translate(Продукты.Eng_word);
+            
+            Продукты.Language = "Английский";
+            Translate(Продукты.Eng_word);
         }
 
         private void Button_Ru_Click(object sender, EventArgs e)
         {
-            translate(Продукты.Ru_word);
+            Продукты.Language = "Русский";
+            Translate(Продукты.Ru_word);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -156,7 +157,7 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             label3.Text = DateTime.Now.ToLongTimeString();
         }

@@ -13,7 +13,7 @@ namespace WindowsFormsApp2
   
     public partial class ProductForm : Form
     {
-        string predmet;
+        readonly string predmet;
         Food vybrannaja_eda;
         //Uchebnik[] uchebniks = new Uchebnik[3];  
 
@@ -37,11 +37,11 @@ namespace WindowsFormsApp2
                 pictureBox1.Top = e.Y + pictureBox1.Top - MouseDownLocation.Y;
             }
         }
-        void translate(Dictionary<string, string> Words)
+        void Translate(Dictionary<string, string> Words)
         {
             try
             {
-              
+
                 label6.Text = Words["Описание"] + ":";
                 //button1.Text = Words["Темная тема"];
                 button3.Text = Words["Добавить в корзину"];
@@ -49,15 +49,12 @@ namespace WindowsFormsApp2
                 Button_Ru.Text = Words["Рус"];
                 Button_Eng.Text = Words["Англ"];
 
-          
+
                 label3.Text = Words["Количество"];
                 label4.Text = Words["Итого к оплате"];
-               // label6.Text = Words["Количество"];
+                // label6.Text = Words["Количество"];
             }
-            catch (Exception e) 
-            {
-                string s = e.Message;
-            }
+            catch (Exception) { }
         }
 
         Food food;
@@ -65,15 +62,15 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
 
-            //Font = new Font("Microsoft Sans Serif", 20);
-            Font = new Font("Microsoft Sans Serif", Convert.ToInt32(kolvo.Text));
+            Font = new Font("Microsoft Sans Serif", 20);
+            //Font = new Font("Microsoft Sans Serif", Convert.ToInt32(kolvo.Text));
 
             label7.Text = DateTime.Now.ToString("");
 
             if (Продукты.Language == "Английский")
-                translate(Продукты.Eng_word);
+                Translate(Продукты.Eng_word);
             if (Продукты.Language == "Русский")
-                translate(Продукты.Ru_word);
+                Translate(Продукты.Ru_word);
 
             foreach (Food food1 in Продукты.aue)
             {
@@ -147,6 +144,7 @@ namespace WindowsFormsApp2
             else
                 Продукты.korz228[vybrannaja_eda] = Продукты.korz228[vybrannaja_eda] + 1;
 
+            //Продукты.lol = 
             label1.Visible = true;
             //PictureBox pb = (PictureBox)sender;
             //Korzina newForm = new Korzina();
@@ -161,12 +159,15 @@ namespace WindowsFormsApp2
             Продукты.aue.Add(vybrannaja_eda);
 
             if (!Продукты.korz228.ContainsKey(vybrannaja_eda))
-                Продукты.korz228.Add(vybrannaja_eda, 1);
+            {
+                Продукты.korz228.Add(vybrannaja_eda, Convert.ToInt32(kolvo.Value));
+                //vybrannaja_eda.
+            }
             else
-                Продукты.korz228[vybrannaja_eda] = Продукты.korz228[vybrannaja_eda] + 1;
+                Продукты.korz228[vybrannaja_eda] = Продукты.korz228[vybrannaja_eda] + Convert.ToInt32(kolvo.Value);
 
 
-
+            
             // newForm.ShowDialog();
 
             label1.Visible = true;
@@ -174,7 +175,7 @@ namespace WindowsFormsApp2
             //label1.Visible = true;
         }
 
-         private void timer1_Tick(object sender, EventArgs e)
+         private void Timer1_Tick(object sender, EventArgs e)
         {
             label7.Text = DateTime.Now.ToLongTimeString();
             int Time228 = Environment.TickCount;
@@ -200,12 +201,14 @@ namespace WindowsFormsApp2
 
         private void Button_Ru_Click(object sender, EventArgs e)
         {
-            translate(Продукты.Ru_word);
+            Продукты.Language = "Русский";
+            Translate(Продукты.Ru_word);
         }
 
         private void Button_Eng_Click(object sender, EventArgs e)
         {
-            translate(Продукты.Eng_word);
+            Продукты.Language = "Английский";
+            Translate(Продукты.Eng_word);
         }
 
         private void button1_Click_1(object sender, EventArgs e)

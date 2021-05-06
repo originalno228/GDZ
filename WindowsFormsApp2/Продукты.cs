@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2
-{
+{ 
+   
     public struct Food
     {
         public PictureBox picture;
@@ -18,6 +19,7 @@ namespace WindowsFormsApp2
         public Label labelName;//название на форме (отоброжается)
         public string name;
         public int price;
+       
         public string category;
 
         public Food(string _name, int _price, string _category)
@@ -35,7 +37,7 @@ namespace WindowsFormsApp2
     public partial class Продукты : Form
     {
         public static List<Food> eda = new List<Food>();
-
+        public int lol;//kolvo
 
         //public static Korzina[] korz = new Korzina[10];
         /// <summary>
@@ -53,7 +55,7 @@ namespace WindowsFormsApp2
         public static string Language;
 
 
-        void translate(Dictionary<string, string> Words)
+        void Translate(Dictionary<string, string> Words)
         {
             label6.Text = Words["Бюджет"];
             button2.Text = Words["Применить"];
@@ -79,13 +81,13 @@ namespace WindowsFormsApp2
         private void Button_Eng_Click_1(object sender, EventArgs e)
         {
             Language = "Английский";
-            translate(Eng_word);
+            Translate(Eng_word);
         }
 
         private void Button_Ru_Click_1(object sender, EventArgs e)
         {
             Language = "Русский";
-            translate(Ru_word);
+            Translate(Ru_word);
         }
         
         public Продукты()
@@ -137,9 +139,9 @@ namespace WindowsFormsApp2
 
             Language = Properties.Settings.Default.Language;
             if (Language == "Английский")
-                translate(Продукты.Eng_word);
+                Translate(Продукты.Eng_word);
             if (Language == "Русский")
-                translate(Продукты.Ru_word);
+                Translate(Продукты.Ru_word);
             #endregion
 
             //время
@@ -174,10 +176,10 @@ namespace WindowsFormsApp2
                 panel1.Controls.Add(eda[i].picture);
 
                 //--------------Цена--------------------------------------
-                if (eda[i].price <100)
-                {
-                    eda[i].labelPrice.ForeColor = Color.Red;
-                }
+                //if (eda[i].price <100)
+                //{
+                //    eda[i].labelPrice.ForeColor = Color.Red;
+                //}
                 eda[i].labelPrice.Location = new Point(x + 110, y + 150);
                 //eda[i].labelPrice.Location = new Point(eda[i].picture.Location.X + 130, eda[i].picture.Location.Y + 150);
             
@@ -212,12 +214,10 @@ namespace WindowsFormsApp2
         //сортировка по цене и названию
         private void button2_Click(object sender, EventArgs e)
         {
-
-
-                Random rnd = new Random();
-                string[] yes = { "Rufus", "Bear", "Dakota", "Fido",
-                          "Vanya", "Samuel", "Koani", "Volodya",
-                          "Prince", "Yiska" };
+            Random rnd = new Random();
+            string[] yes = { "Rufus", "Bear", "Dakota", "Fido",
+                        "Vanya", "Samuel", "Koani", "Volodya",
+                        "Prince", "Yiska" };
 
             int nomer = rnd.Next() % yes.Length;
             button2.Text = yes[nomer];
@@ -322,7 +322,7 @@ namespace WindowsFormsApp2
             loginLabel.Text = Registr.Login;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
 
             label1.Text = DateTime.Now.ToLongTimeString();            
@@ -333,6 +333,10 @@ namespace WindowsFormsApp2
 
              }
 
+            if (Продукты.Language == "Английский")
+                Translate(Продукты.Eng_word);
+            if (Продукты.Language == "Русский")
+                Translate(Продукты.Ru_word);
 
         }
 
@@ -373,8 +377,8 @@ namespace WindowsFormsApp2
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AddProducts newForm = new AddProducts();
-            newForm.Show();
+            //кт newForm = new кт();
+            //newForm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

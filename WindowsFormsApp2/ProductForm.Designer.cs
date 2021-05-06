@@ -94,7 +94,12 @@ namespace WindowsFormsApp2
             // 
             this.kolvo.Location = new System.Drawing.Point(349, 48);
             this.kolvo.Maximum = new decimal(new int[] {
-            999999,
+            999,
+            0,
+            0,
+            0});
+            this.kolvo.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -102,7 +107,7 @@ namespace WindowsFormsApp2
             this.kolvo.Size = new System.Drawing.Size(79, 36);
             this.kolvo.TabIndex = 30;
             this.kolvo.Value = new decimal(new int[] {
-            14,
+            1,
             0,
             0,
             0});
@@ -218,7 +223,7 @@ namespace WindowsFormsApp2
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // button3
             // 

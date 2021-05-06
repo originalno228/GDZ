@@ -48,5 +48,10 @@ namespace WindowsFormsApp2
                 count = Convert.ToInt32(kolvo.Value);
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

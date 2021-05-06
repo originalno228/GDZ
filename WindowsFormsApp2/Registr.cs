@@ -19,7 +19,7 @@ namespace WindowsFormsApp2
         public static string Login = "";
         public static string Parol = "";
 
-        List<string> Users = new List<string>();
+        readonly List<string> Users = new List<string>();
 
         public Registr()
         {
@@ -62,7 +62,7 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             label2.Text = DateTime.Now.ToLongTimeString();
         }
@@ -77,7 +77,7 @@ namespace WindowsFormsApp2
 
         }
         //отправка на почту
-        string mail = "Semerochka228@gmail.com";
+        readonly string mail = "Semerochka228@gmail.com";
         private void button2_Click(object sender, EventArgs e)
         {
             MailAddress fromMailAddress = new MailAddress(mail, "Заказчик");//c какого адреса

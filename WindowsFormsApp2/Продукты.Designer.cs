@@ -257,13 +257,12 @@ namespace WindowsFormsApp2
             this.button4.TabIndex = 65;
             this.button4.Text = "Добавить товар";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // pictureBox1
             // 

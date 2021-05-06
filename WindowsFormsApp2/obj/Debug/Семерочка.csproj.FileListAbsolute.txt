@@ -80,7 +80,6 @@ C:\Users\beavi\Desktop\Новая папка\GDZ Миша\WindowsFormsApp2\obj\D
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
-C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\Семерочка.csprojAssemblyReference.cache
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddProducts.resources
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Korzina.resources
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ProductForm.resources
@@ -92,3 +91,4 @@ C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\Семерочка.csproj.CoreCompileInputs.cache
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\Семерочка.csprojAssemblyReference.cache
