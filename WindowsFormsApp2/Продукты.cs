@@ -309,6 +309,8 @@ namespace WindowsFormsApp2
 
        int Time1 = 0;
 
+        public Cursor No { get; private set; }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Registr newForm = new Registr();
@@ -320,6 +322,12 @@ namespace WindowsFormsApp2
             button4.Visible = (Registr.Login == "Админ" && Registr.Parol == "123");
 
             loginLabel.Text = Registr.Login;
+
+            
+
+            button4.Text = "Добавить товар";
+            button4.ForeColor = Color.Black;
+            button4.Cursor = Cursors.Default;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -377,8 +385,19 @@ namespace WindowsFormsApp2
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //кт newForm = new кт();
-            //newForm.Show();
+            if (loginLabel.Text == "Админ")
+            {
+                AddProducts newForm = new AddProducts();
+                newForm.Show();
+
+            }
+            else
+            {
+                button4.Text = "Вы не админ!";
+                button4.ForeColor = Color.Red;
+                button4.Cursor = Cursors.No;
+            }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -394,6 +413,12 @@ namespace WindowsFormsApp2
         private void Продукты_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Svaz newForm = new Svaz();
+            newForm.ShowDialog();
         }
     }
 }
