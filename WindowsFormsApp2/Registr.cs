@@ -36,18 +36,31 @@ namespace WindowsFormsApp2
             System.Diagnostics.Process.Start("https://vk.com/mihmet");
         }
 
+        
+
+
         private void button4_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
-            { 
-            Login = textBox1.Text;
-            Parol = textBox2.Text;
-            Close();
+            if (textBox1.Text == "Админ" && textBox2.Text != "123")
+            {
+                MessageBox.Show("неправильный пароль");   
             }
             else
             {
-                checkBox1.ForeColor = Color.Red;
+                if (checkBox1.Checked == true)
+                { 
+                Login = textBox1.Text;
+                Parol = textBox2.Text;
+                Close();
+                }
+                else
+                {
+                    checkBox1.ForeColor = Color.Red;
+                }
             }
+            
+
+            
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)

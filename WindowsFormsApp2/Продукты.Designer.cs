@@ -145,9 +145,9 @@ namespace WindowsFormsApp2
             "Овощи",
             "Фастфуд",
             "Соки"});
-            this.categorys.Location = new System.Drawing.Point(849, 156);
+            this.categorys.Location = new System.Drawing.Point(844, 126);
             this.categorys.Name = "categorys";
-            this.categorys.Size = new System.Drawing.Size(149, 178);
+            this.categorys.Size = new System.Drawing.Size(149, 207);
             this.categorys.TabIndex = 55;
             this.categorys.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.categorys_ItemCheck);
             this.categorys.SelectedIndexChanged += new System.EventHandler(this.categorys_SelectedIndexChanged);
@@ -158,7 +158,7 @@ namespace WindowsFormsApp2
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.No;
-            this.label5.Location = new System.Drawing.Point(844, 124);
+            this.label5.Location = new System.Drawing.Point(844, 94);
             this.label5.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 29);
@@ -184,7 +184,7 @@ namespace WindowsFormsApp2
             this.loginLabel.AutoSize = true;
             this.loginLabel.BackColor = System.Drawing.SystemColors.Control;
             this.loginLabel.ForeColor = System.Drawing.Color.Black;
-            this.loginLabel.Location = new System.Drawing.Point(864, 88);
+            this.loginLabel.Location = new System.Drawing.Point(864, 65);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(105, 29);
             this.loginLabel.TabIndex = 59;

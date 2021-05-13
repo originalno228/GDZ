@@ -46,5 +46,73 @@ namespace WindowsFormsApp2.Properties {
                 this["Параметр"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public global::System.Drawing.Color SaveColor {
+            get {
+                return ((global::System.Drawing.Color)(this["SaveColor"]));
+            }
+            set {
+                this["SaveColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Red")]
+        public global::System.Drawing.Color SaveColorPanel {
+            get {
+                return ((global::System.Drawing.Color)(this["SaveColorPanel"]));
+            }
+            set {
+                this["SaveColorPanel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color SaveColor2 {
+            get {
+                return ((global::System.Drawing.Color)(this["SaveColor2"]));
+            }
+            set {
+                this["SaveColor2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color SaveColor3 {
+            get {
+                return ((global::System.Drawing.Color)(this["SaveColor3"]));
+            }
+            set {
+                this["SaveColor3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color SaveColorPanel2 {
+            get {
+                return ((global::System.Drawing.Color)(this["SaveColorPanel2"]));
+            }
+            set {
+                this["SaveColorPanel2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color SaveColor4 {
+            get {
+                return ((global::System.Drawing.Color)(this["SaveColor4"]));
+            }
+            set {
+                this["SaveColor4"] = value;
+            }
+        }
     }
 }

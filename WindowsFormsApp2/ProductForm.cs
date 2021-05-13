@@ -72,6 +72,8 @@ namespace WindowsFormsApp2
             if (Продукты.Language == "Русский")
                 Translate(Продукты.Ru_word);
 
+            BackColor = Properties.Settings.Default.SaveColor2;
+
             foreach (Food food1 in Продукты.aue)
             {
                 if (food.name == name)
@@ -195,7 +197,10 @@ namespace WindowsFormsApp2
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
+               
                 BackColor = colorDialog1.Color;
+                Properties.Settings.Default.SaveColor2 = BackColor;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -224,6 +229,12 @@ namespace WindowsFormsApp2
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Korzina newForm = new Korzina();
+            newForm.Show();
         }
     }
 }

@@ -138,6 +138,8 @@ namespace WindowsFormsApp2
 
 
             Language = Properties.Settings.Default.Language;
+            BackColor = Properties.Settings.Default.SaveColor;
+            panel1.BackColor = Properties.Settings.Default.SaveColorPanel;
             if (Language == "Английский")
                 Translate(Продукты.Eng_word);
             if (Language == "Русский")
@@ -158,7 +160,7 @@ namespace WindowsFormsApp2
                 eda[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
                 eda[i].picture.Tag = eda[i].name;
                 
-
+                
                 eda[i].picture.Size = new Size(150, 150);
                 try//попытка загрузить картинку либо jpj либо png либо до связи
                 {
@@ -314,10 +316,8 @@ namespace WindowsFormsApp2
             Registr newForm = new Registr();
             newForm.ShowDialog();
             loginLabel.Text = akkaunt;
-            button4.Visible = true;
+            //button4.Visible = true;
             Time1 = Environment.TickCount;
-
-            button4.Visible = (Registr.Login == "Админ" && Registr.Parol == "123");
 
             loginLabel.Text = Registr.Login;
         }
@@ -327,7 +327,7 @@ namespace WindowsFormsApp2
 
             label1.Text = DateTime.Now.ToLongTimeString();            
               int  Time228 = Environment.TickCount;
-            if (Time228 - Time1 > 2000)
+            if (Time228 - Time1 > 2000 || Registr.Login == "Админ" && Registr.Parol == "123")
              {
             // button4.Visible = false;
 
@@ -337,6 +337,35 @@ namespace WindowsFormsApp2
                 Translate(Продукты.Eng_word);
             if (Продукты.Language == "Русский")
                 Translate(Продукты.Ru_word);
+
+
+            int Time2282 = Environment.TickCount;
+            if (Time2282 - Time1 > 2000)
+            {
+                button4.Text = "Добавить товар";
+                button4.Cursor = Cursors.Default;
+                button4.ForeColor = Color.Black;
+                Time1 = Environment.TickCount;
+
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+            if (loginLabel.Text != "Админ")
+            {
+                button4.Text = "Вы не админ!";
+                button4.Cursor = Cursors.No;
+                button4.ForeColor = Color.Red;
+                Time1 = Environment.TickCount;
+            }
+            else
+            {
+                AddProducts newForm = new AddProducts();
+                newForm.Show();
+            }
 
         }
 
@@ -372,22 +401,21 @@ namespace WindowsFormsApp2
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 BackColor = colorDialog1.Color;
+                Properties.Settings.Default.SaveColor = BackColor;
+                Properties.Settings.Default.Save();
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //кт newForm = new кт();
-            //newForm.Show();
-        }
-
+        
         private void button5_Click(object sender, EventArgs e)
         {
            
                 if (colorDialog1.ShowDialog() == DialogResult.OK)
                 {
                     panel1.BackColor = colorDialog1.Color;
-                }
+                    Properties.Settings.Default.SaveColorPanel = panel1.BackColor;
+                    Properties.Settings.Default.Save();
+            }
             
         }
 

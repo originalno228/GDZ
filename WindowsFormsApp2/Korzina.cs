@@ -27,6 +27,10 @@ namespace WindowsFormsApp2
 
             InitializeComponent();
 
+            BackColor = Properties.Settings.Default.SaveColor3;
+            panel1.BackColor = Properties.Settings.Default.SaveColorPanel2;
+
+
             if (Продукты.Language == "Английский")
                 Translate(Продукты.Eng_word);
             if (Продукты.Language == "Русский")
@@ -135,7 +139,10 @@ namespace WindowsFormsApp2
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
+
                 BackColor = colorDialog1.Color;
+                Properties.Settings.Default.SaveColor3 = BackColor;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -144,6 +151,8 @@ namespace WindowsFormsApp2
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 panel1.BackColor = colorDialog1.Color;
+                Properties.Settings.Default.SaveColorPanel2 = panel1.BackColor;
+                Properties.Settings.Default.Save();
             }
         }
 
