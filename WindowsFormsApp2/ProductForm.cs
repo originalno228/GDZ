@@ -40,12 +40,15 @@ namespace WindowsFormsApp2
         void Translate(Dictionary<string, string> Words)
         {
             try
-            {
-
-                label6.Text = Words["Описание"] + ":";
+            {        
+                                      
+                //label6.Text = Words["Описание"] + ":";
+                //label6.Text = Words["Описание"] + ":";
+                 
                 //button1.Text = Words["Темная тема"];
                 button3.Text = Words["Добавить в корзину"];
                 button2.Text = Words["Интерфейс"];
+                button4.Text = Words["На главную"];
                 Button_Ru.Text = Words["Рус"];
                 Button_Eng.Text = Words["Англ"];
 
@@ -93,7 +96,7 @@ namespace WindowsFormsApp2
                 if (food.name == name)
                 {
                     vybrannaja_eda = food;
-                    label2.Text = "Цена: " + food.price.ToString();
+                    //label2.Text = "Цена: " + food.price.ToString();
                     label5.Text = (vybrannaja_eda.price * kolvo.Value).ToString();
                 }
             }
@@ -235,6 +238,11 @@ namespace WindowsFormsApp2
         {
             Korzina newForm = new Korzina();
             newForm.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

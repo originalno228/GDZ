@@ -108,3 +108,4 @@ C:\Users\beavi\Downloads\git\2 год\Semerochka\WindowsFormsApp2\obj\Debug\Се
 C:\Users\beavi\Downloads\git\2 год\Semerochka\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\beavi\Downloads\git\2 год\Semerochka\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\beavi\Downloads\git\2 год\Semerochka\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Svaz.resources
+C:\Users\beavi\Desktop\Новая папка\Семерочка\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Svaz.resources

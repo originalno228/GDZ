@@ -17,6 +17,7 @@ namespace WindowsFormsApp2
         {
             label1.Text = Words["Общая цена"] + ":";
             button2.Text = Words["Оплатить и выйти"];
+            button3.Text = Words["Очистить корзину"];
             Button_Ru.Text = Words["Рус"];
             Button_Eng.Text = Words["Англ"];
             //button3.Text = Words["Интерфейс"];

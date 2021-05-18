@@ -59,6 +59,7 @@ namespace WindowsFormsApp2
         {
             label6.Text = Words["Бюджет"];
             button2.Text = Words["Применить"];
+            button4.Text = Words["Добавить товар"];
             label14.Text = Words["Продукты"];
             label5.Text = Words["Категория"];
             Button_Ru.Text = Words["Рус"];
@@ -68,7 +69,7 @@ namespace WindowsFormsApp2
             Text = Words["Семерочка"];
 
 
-           
+            
             /*
             categorys.Items[0] = Words["Фрукты"];
             categorys.Items[1] = Words["Овощи"];
@@ -348,8 +349,8 @@ namespace WindowsFormsApp2
                 Time1 = Environment.TickCount;
 
             }
-
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -357,7 +358,7 @@ namespace WindowsFormsApp2
             if (loginLabel.Text != "Админ")
             {
                 button4.Text = "Вы не админ!";
-                button4.Cursor = Cursors.No;
+                button4.Cursor = Cursors.No;  
                 button4.ForeColor = Color.Red;
                 Time1 = Environment.TickCount;
             }

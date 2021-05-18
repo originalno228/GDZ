@@ -19,5 +19,8 @@
 Добавить в корзину; Add to Cart
 Семерочка; Semerochka
 Количество; Count
-Итого к оплате; хз
+Итого к оплате; total payable
 Цена; Price
+Добавить товар; Add products
+На главную; Leave to main
+Очистить корзину; Clear Basket

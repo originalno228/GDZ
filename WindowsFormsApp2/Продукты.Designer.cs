@@ -51,6 +51,7 @@ namespace WindowsFormsApp2
             this.button4 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -276,11 +277,21 @@ namespace WindowsFormsApp2
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(614, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 29);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "Вы не админ!";
+            // 
             // Продукты
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 546);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.loginLabel);
@@ -295,6 +306,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.Poisk);
             this.Controls.Add(this.label14);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Продукты";
             this.Text = "Семерочка";
@@ -331,5 +343,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label2;
     }
 }

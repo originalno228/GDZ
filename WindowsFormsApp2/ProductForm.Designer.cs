@@ -31,8 +31,6 @@ namespace WindowsFormsApp2
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.kolvo = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,44 +47,20 @@ namespace WindowsFormsApp2
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kolvo)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(646, 9);
-            this.label6.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 39);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Описание:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(657, 55);
-            this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 29);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "описание";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.Lime;
-            this.button4.Location = new System.Drawing.Point(12, 377);
+            this.button4.Location = new System.Drawing.Point(12, 350);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(181, 91);
+            this.button4.Size = new System.Drawing.Size(317, 91);
             this.button4.TabIndex = 22;
             this.button4.Text = "На главную";
             this.button4.UseVisualStyleBackColor = false;
@@ -133,7 +107,7 @@ namespace WindowsFormsApp2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(344, 115);
+            this.label4.Location = new System.Drawing.Point(514, 16);
             this.label4.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 29);
@@ -144,7 +118,7 @@ namespace WindowsFormsApp2
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(535, 115);
+            this.label5.Location = new System.Drawing.Point(711, 16);
             this.label5.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 29);
@@ -158,7 +132,7 @@ namespace WindowsFormsApp2
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(344, 183);
+            this.label1.Location = new System.Drawing.Point(343, 310);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 29);
             this.label1.TabIndex = 39;
@@ -176,7 +150,7 @@ namespace WindowsFormsApp2
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.Button_Eng);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Location = new System.Drawing.Point(779, 351);
+            this.panel2.Location = new System.Drawing.Point(659, 316);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(175, 122);
             this.panel2.TabIndex = 65;
@@ -231,9 +205,9 @@ namespace WindowsFormsApp2
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(349, 235);
+            this.button3.Location = new System.Drawing.Point(340, 350);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(195, 79);
+            this.button3.Size = new System.Drawing.Size(222, 91);
             this.button3.TabIndex = 41;
             this.button3.Text = "Добавить\r\nв корзину";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,7 +219,7 @@ namespace WindowsFormsApp2
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(326, 323);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -259,13 +233,25 @@ namespace WindowsFormsApp2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(375, 334);
+            this.pictureBox2.Location = new System.Drawing.Point(562, 350);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(144, 83);
+            this.pictureBox2.Size = new System.Drawing.Size(94, 86);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 66;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(349, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(481, 195);
+            this.button1.TabIndex = 67;
+            this.button1.Text = "Здесь могла быть ваша реклама";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // ProductForm
             // 
@@ -273,7 +259,8 @@ namespace WindowsFormsApp2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(954, 480);
+            this.ClientSize = new System.Drawing.Size(846, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button3);
@@ -281,8 +268,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.kolvo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -304,8 +289,6 @@ namespace WindowsFormsApp2
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.NumericUpDown kolvo;
         private System.Windows.Forms.Label label3;
@@ -321,6 +304,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
